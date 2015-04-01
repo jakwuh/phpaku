@@ -1,0 +1,976 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"clea",
+				"clearViews"
+			],
+			[
+				"town",
+				"town_map"
+			],
+			[
+				"to",
+				"Town"
+			],
+			[
+				"bit",
+				"bitmap_width"
+			],
+			[
+				"bitmap",
+				"bitmap_width"
+			],
+			[
+				"map",
+				"map_path"
+			],
+			[
+				"delet",
+				"DeleteObject"
+			],
+			[
+				"DOU",
+				"BTN_DOUBLEMODE"
+			],
+			[
+				"title",
+				"title_text"
+			],
+			[
+				"but",
+				"button_y"
+			],
+			[
+				"btn",
+				"btn_height"
+			],
+			[
+				"btn_",
+				"btn_height"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"win",
+				"window_classname"
+			],
+			[
+				"main",
+				"main_window"
+			],
+			[
+				"фун",
+				"функций"
+			],
+			[
+				"end",
+				"endp"
+			],
+			[
+				"dat",
+				"Database"
+			],
+			[
+				"SQLITE",
+				"SQLITE_DONE"
+			],
+			[
+				"SQL",
+				"SQLITE_ROW"
+			],
+			[
+				"err",
+				"error_code"
+			],
+			[
+				"inti",
+				"initStatementMap"
+			],
+			[
+				"ini",
+				"initSQLMap"
+			],
+			[
+				"sql",
+				"sqlite3_step"
+			],
+			[
+				"0F",
+				"0FFFFFFFFh"
+			],
+			[
+				"FFFF",
+				"0FFFFFFFFh"
+			],
+			[
+				"cl",
+				"cl_brack"
+			],
+			[
+				"интере",
+				"интерфейсом"
+			],
+			[
+				"ins",
+				"insert_index"
+			],
+			[
+				"wo",
+				"words"
+			],
+			[
+				"in",
+				"insert_index"
+			],
+			[
+				"hea",
+				"heapify"
+			],
+			[
+				"heap",
+				"heap_size"
+			],
+			[
+				"upda",
+				"updateViews"
+			],
+			[
+				"max",
+				"maxPxX"
+			],
+			[
+				"Dic",
+				"DictionaryConfig"
+			],
+			[
+				"conta",
+				"Container"
+			],
+			[
+				"item",
+				"item_part"
+			],
+			[
+				"tra",
+				"translationsold"
+			],
+			[
+				"wod",
+				"wordsold"
+			],
+			[
+				"ac",
+				"averageOnCells"
+			],
+			[
+				"retru",
+				"return"
+			],
+			[
+				"inco",
+				"incorporate"
+			],
+			[
+				"inc",
+				"income"
+			],
+			[
+				"lo",
+				"LONGINT"
+			],
+			[
+				"shell",
+				"shell_sort"
+			],
+			[
+				"coun",
+				"counting_sort"
+			],
+			[
+				"selection",
+				"selection_sort"
+			],
+			[
+				"coctail",
+				"coctail_sort"
+			],
+			[
+				"bub",
+				"bubble_sort"
+			],
+			[
+				"ad",
+				"adjacency"
+			],
+			[
+				"ver",
+				"vertex_count"
+			],
+			[
+				"verte",
+				"vertex_count"
+			],
+			[
+				"we",
+				"weights"
+			],
+			[
+				"wei",
+				"weights"
+			],
+			[
+				"co",
+				"counting_sort"
+			],
+			[
+				"left",
+				"left_border"
+			],
+			[
+				"adja",
+				"adjacency_list"
+			],
+			[
+				"adaj",
+				"adjacency_list"
+			],
+			[
+				"ada",
+				"adjacency_list"
+			],
+			[
+				"start",
+				"start1"
+			],
+			[
+				"sta",
+				"start_j"
+			],
+			[
+				"recu",
+				"recursiveCount"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 78.0,
+		"last_filter": "c1",
+		"selected_items":
+		[
+			[
+				"c1",
+				"Set Syntax: C++11"
+			],
+			[
+				"asm",
+				"Set Syntax: ARM Assembly"
+			],
+			[
+				"Snippet: inc",
+				"Snippet: cppinclude"
+			],
+			[
+				"11",
+				"Set Syntax: C++11"
+			],
+			[
+				"buid",
+				"Build: Build"
+			],
+			[
+				"build",
+				"Build: Build"
+			],
+			[
+				"c11",
+				"Set Syntax: C++11"
+			],
+			[
+				"buil",
+				"Build: Build"
+			],
+			[
+				"c+1",
+				"Set Syntax: C++11"
+			],
+			[
+				"cpp",
+				"Snippet: cppmain"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"ru",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"setc+",
+				"Set Syntax: C++11"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"setasse",
+				"Set Syntax: ARM Assembly"
+			],
+			[
+				"setas",
+				"Set Syntax: AppleScript"
+			],
+			[
+				"asse",
+				"Set Syntax: ARM Assembly"
+			],
+			[
+				"clafo",
+				"Clang Format: Format Selection"
+			],
+			[
+				"clan",
+				"Clang Format: Select Style"
+			],
+			[
+				"ass",
+				"Set Syntax: ARM Assembly"
+			],
+			[
+				"+1",
+				"Set Syntax: C++11"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"+",
+				"Set Syntax: C++11"
+			],
+			[
+				"c+",
+				"Set Syntax: C++11"
+			],
+			[
+				"cla",
+				"Clang Format: Set Path"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"clase",
+				"Clang Format: Select Style"
+			],
+			[
+				"clang",
+				"Clang Format: Select Style"
+			],
+			[
+				"package coli",
+				"Package Control: List Packages"
+			],
+			[
+				"mana",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTAL",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTA",
+				"Package Control: Install Package"
+			],
+			[
+				"REMOVEPA",
+				"Package Control: Remove Package"
+			],
+			[
+				"REMVE",
+				"Package Control: Remove Channel"
+			],
+			[
+				"REMO",
+				"Package Control: Remove Channel"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 408.0
+	},
+	"console":
+	{
+		"height": 359.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/work"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/test/web/app.php",
+		"/D/work/prog/projects/c++/jrush/src/config/levels.cpp",
+		"/D/work/prog/projects/c++/jrush/src/config/config.cpp",
+		"/D/work/prog/projects/c++/jrush/src/core/town.cpp",
+		"/D/work/prog/projects/c++/jrush/src/core/town.h",
+		"/D/work/prog/projects/c++/jrush/src/controllers/bot.h",
+		"/D/work/prog/projects/c++/jrush/src/controllers/bot.cpp",
+		"/D/work/prog/projects/c++/jrush/src/graphics/view.cpp",
+		"/D/work/prog/projects/c++/game/src/core/view.cpp",
+		"/D/media/soft/install/MISC/KMSAuto Net 2014 v1.2.4 Portable RU Активатор office VL/KMSAuto Net 2014 v1.2.4 Portable RU/readme_ru.txt",
+		"/D/work/prog/projects/c++/game/src/controllers/bot.h",
+		"/D/work/prog/projects/c++/jrush/src/core/application.cpp",
+		"/D/work/prog/projects/c++/jrush/src/core/application.h",
+		"/D/work/prog/acm/acmp/main.cpp",
+		"/D/work/prog/terms/2/theory/C++/Ассемблер_подпрограммы/ПримерWIN32/MSGBOX.ASM",
+		"/D/work/prog/projects/c++/jrush/src/core/tmp.cpp",
+		"/D/work/prog/projects/c++/jrush/src/controllers/player.h",
+		"/D/work/prog/projects/c++/jrush/src/utils/math.h",
+		"/D/work/prog/projects/c++/jrush/src/config/levels.h",
+		"/D/work/prog/projects/c++/jrush/src/main.cpp",
+		"/D/work/prog/projects/c++/jrush/src/graphics/circle.h",
+		"/D/work/prog/projects/c++/jrush/src/graphics/circle.cpp",
+		"/D/work/prog/projects/c++/jrush/src/graphics/cursor.h",
+		"/D/work/prog/projects/c++/jrush/src/graphics/cursor.cpp",
+		"/D/work/prog/projects/c++/jrush/src/graphics/view.h",
+		"/D/work/prog/projects/c++/jrush/src/config/settings.h",
+		"/D/work/prog/projects/c++/jrush/src/graphics/menu.cpp",
+		"/D/work/prog/projects/c++/jrush/src/core/interfaces.h",
+		"/D/work/prog/terms/2/lections/Examples/Class Example #10 - Derived class.cpp",
+		"/D/work/prog/terms/2/lections/Templates.cpp",
+		"/D/work/prog/acm/acmp/input.txt",
+		"/D/work/english/terms/2/IPS",
+		"/D/work/prog/projects/c++/jrush/src/graphics/menu.h",
+		"/D/work/prog/projects/c++/jrush/src/config/errors.h",
+		"/D/work/prog/projects/c++/jrush/src/utils/menu.h",
+		"/D/work/prog/projects/c++/jrush/src/utils/menu.cpp",
+		"/D/work/prog/projects/c++/jrush/src/graphics/region.h",
+		"/D/work/prog/projects/c++/jrush/src/interfaces/idrawable.h",
+		"/D/work/prog/terms/2/assembly/strings/strings/functions.asm",
+		"/D/work/prog/projects/c++/jrush/src/utils/styles.h",
+		"/D/work/prog/projects/c++/jrush/src/graphics/bitmap.cpp",
+		"/D/work/prog/projects/c++/jrush/src/core/generator.h",
+		"/D/work/prog/projects/c++/jrush/src/graphics/region.cpp",
+		"/D/work/prog/projects/c++/jrush/src/controllers/player.cpp",
+		"/D/work/prog/projects/c++/game/src/core/view.h",
+		"/D/work/prog/projects/c++/jrush/src/tmp.cpp",
+		"/D/work/prog/terms/2/labs/2-4/cpp/1 fraction/Fraction/fraction.h",
+		"/D/work/prog/projects/c++/jrush/src/graphics/pixel_region.h",
+		"/D/work/prog/projects/c++/jrush/src/core/map.h",
+		"/D/work/prog/projects/c++/jrush/src/core/map.cpp",
+		"/D/work/prog/projects/c++/jrush/src/core/view.h",
+		"/D/work/prog/projects/c++/game/src/core/application.cpp",
+		"/D/work/prog/terms/2/lections/Examples/WinApi Example #2.cpp",
+		"/D/work/prog/terms/2/lections/Examples/WinApi Example #1.cpp",
+		"/D/work/prog/projects/c++/jrush/src/utils/colors.h",
+		"/D/work/prog/projects/c++/game/src/config/surface.h",
+		"/D/work/prog/projects/c++/jrush/src/bot.cpp",
+		"/D/work/prog/projects/c++/jrush/src/player.cpp",
+		"/D/work/prog/projects/c++/jrush/src/map.cpp",
+		"/D/work/prog/projects/c++/jrush/src/town.cpp",
+		"/D/work/prog/projects/c++/jrush/src/bot.h",
+		"/D/work/prog/projects/c++/jrush/src/player.h",
+		"/D/work/prog/projects/c++/jrush/src/map.h",
+		"/D/work/prog/projects/c++/jrush/src/town.h",
+		"/D/work/prog/projects/c++/game/src/includes/map.h",
+		"/D/tmp/main.cpp",
+		"/D/tmp/list.h",
+		"/D/tmp/list.cpp",
+		"/D/work/prog/terms/2/labs/2-3/cpp/2 list/list/list.cpp",
+		"/D/work/prog/terms/2/labs/2-3/cpp/2 list/list/list.h",
+		"/D/work/prog/projects/c++/game/src/controllers/player.cpp",
+		"/D/work/prog/projects/c++/game/src/controllers/player.h",
+		"/D/work/prog/projects/c++/jrush/src/core/ai.h",
+		"/D/work/prog/projects/c++/jrush/src/core/ai.cpp",
+		"/D/work/prog/projects/c++/jrush/.gitignore",
+		"/D/work/prog/projects/c++/jrush/src/config/surface.h",
+		"/D/work/prog/projects/c++/jrush/src/core/view.cpp",
+		"/D/work/prog/projects/c++/jrush/src/config/debug.h",
+		"/D/work/prog/projects/c++/game/key_features.txt",
+		"/D/work/prog/terms/2/assembly/binary_math/binary_math/main.cpp",
+		"/D/docs/misc/meeting.txt",
+		"/D/work/prog/projects/c++/game/skills_to_show.txt",
+		"/D/work/prog/projects/c++/game/technical_info.txt",
+		"/D/work/prog/terms/2/assembly/binary_math/binary_math/functions.h",
+		"/D/work/prog/acm/cf/input.txt",
+		"/D/work/prog/terms/2/assembly/assembly.asm",
+		"/D/work/prog/terms/2/assembly/binary_math/binary_math/functions.cpp",
+		"/D/work/prog/acm/cf/520A.cpp",
+		"/D/work/prog/acm/cf/520B.cpp",
+		"/D/work/prog/acm/algos/searching & sorting/binary_search.cpp",
+		"/D/work/prog/terms/2/theory/examples/Информация/ASSEMBLE/ASM-BOOK/ASM-BRAD/BRAD-I",
+		"/D/work/prog/acm/cf/1B.cpp",
+		"/D/work/prog/acm/cf/527B.cpp",
+		"/D/work/prog/acm/cf/527A.cpp",
+		"/D/work/prog/terms/2/theory/examples/Информация/ASSEMBLE/ASM-BOOK/ASM-BRAD/BRAD-5-2",
+		"/D/work/english/terms/2/киреев/5.doc",
+		"/D/work/prog/terms/2/assembly/array/array/functions.h",
+		"/D/work/prog/acm/cf/1A+.cpp",
+		"/D/work/prog/terms/2/assembly/array/array/main.cpp",
+		"/C/Users/James/Desktop/changes/audit/constructors/string/string.h",
+		"/D/work/prog/terms/2/assembly/strings/strings/functions.h",
+		"/D/work/prog/terms/2/assembly/strings/strings/main.cpp",
+		"/D/work/prog/terms/2/assembly/array/array/functions.asm",
+		"/D/work/prog/terms/2/assembly/array/array/tmp.h",
+		"/D/work/prog/terms/2/lections/Examples/Templates Example #3.cpp",
+		"/D/work/prog/terms/2/lections/Examples/Templates Example #2.cpp",
+		"/D/work/prog/terms/2/lections/Examples/tmp.cpp",
+		"/D/work/prog/projects/web/tr/resources/misc/TkrmParse.js",
+		"/D/work/prog/terms/2/theory/C++/Ассемблер_матрицы/Транспонирование матрицы/transp_matr.cpp",
+		"/D/work/prog/projects/c++/vocabulary/test.cpp",
+		"/D/work/prog/terms/2/lections/Examples/Templates Example #1.cpp",
+		"/D/work/prog/terms/2/lections/Class.cpp",
+		"/E/masm32/procs/query.asm",
+		"/D/work/prog/projects/c++/vocabulary/main.cpp",
+		"/D/work/prog/projects/c++/vocabulary/adapters/database.h",
+		"/D/work/prog/projects/c++/vocabulary/adapters/database.cpp",
+		"/D/work/prog/projects/c++/vocabulary/containers/container.h",
+		"/D/work/prog/projects/c++/vocabulary/containers/container.cpp",
+		"/D/work/prog/projects/c++/vocabulary/adapters/statement.cpp",
+		"/D/work/prog/projects/c++/vocabulary/adapters/statement.h",
+		"/D/work/prog/projects/c++/vocabulary/containers/wordset.cpp",
+		"/D/work/prog/projects/c++/vocabulary/containers/wordset.h",
+		"/D/work/prog/projects/c++/vocabulary/core/errors.h",
+		"/D/work/prog/projects/c++/game/src/main.cpp",
+		"/D/work/english/terms/2/english.txt",
+		"/D/work/prog/tmp/main.cpp",
+		"/D/work/prog/tmp/test.cpp",
+		"/D/work/prog/terms/2/lections/Examples/Class Example #11 - Interface.cpp"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"D:\\work\\prog\\projects\\c++\\jrush"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"200",
+			"2400",
+			"2900",
+			"600",
+			"10",
+			"300",
+			"1",
+			"500",
+			"0.5",
+			"Circle",
+			"TOWNVECTOR",
+			"main_window",
+			"hwnd",
+			"main_window",
+			"objects",
+			"level_1",
+			"level1",
+			"levels.h",
+			"TownMap",
+			"x",
+			"width",
+			"generateLevel",
+			"app->mainWindow",
+			"n",
+			"ptr",
+			"l",
+			"k",
+			"cout",
+			"os",
+			"o",
+			"double",
+			"	double deviation = 0.5 - 0.4 * ((double)::config::difficulty * 1. / (double)::config::max_difficulty);\n",
+			"double",
+			"Background",
+			"TitleText",
+			"button_x_text",
+			"settings",
+			"settings_y",
+			"y",
+			"x",
+			"hButton2",
+			"lparam",
+			"Нижняя",
+			"lparam",
+			"HWND",
+			"N",
+			" button",
+			"RegisterMainWindow",
+			"m_hwnd",
+			"HWND",
+			"px_y",
+			"px_x",
+			"size",
+			"ai",
+			"_aim",
+			"px",
+			"wndProc",
+			"hI",
+			"mapPathName",
+			"windowClassName",
+			"mainWindow",
+			"hwnd",
+			"eax",
+			"i",
+			"row",
+			"mi",
+			"fcomi",
+			"int",
+			"gcdr",
+			"esp",
+			"esi",
+			"eax",
+			"edi",
+			"eax",
+			"m_ptr",
+			"ostream",
+			"n",
+			"map",
+			"char",
+			"ostream",
+			"& ",
+			"ostream",
+			"_array_conjuction",
+			"sum",
+			"sudm",
+			"класса",
+			"n",
+			"m_end",
+			"ebx",
+			"push",
+			"m_ptr",
+			"ptr",
+			"end",
+			".",
+			"errors",
+			"rc",
+			"Integer",
+			"Double",
+			"Integer",
+			"int",
+			"nInteger",
+			"Integer",
+			"process",
+			"SQLITE_DONE",
+			"process",
+			"std::string",
+			"step",
+			"bolol",
+			"result",
+			"column",
+			"iterator",
+			"Word",
+			"iterator",
+			"Word",
+			"iterator",
+			"Word",
+			"(const char*)word",
+			"begin",
+			"words",
+			"text",
+			");",
+			"result",
+			"text",
+			"1, word",
+			"initSQLMap",
+			"c_str",
+			"stmt",
+			"sql.c_str()"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\n",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.CppYCM.2":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 314.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/cpp.sublime-build",
+	"project": "test.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"bocp",
+				"prog\\projects\\c++\\jrush\\src\\controllers\\bot.cpp"
+			],
+			[
+				"conf",
+				"prog\\projects\\c++\\jrush\\src\\config\\config.cpp"
+			],
+			[
+				"townh",
+				"prog\\projects\\c++\\jrush\\src\\core\\town.h"
+			],
+			[
+				"both",
+				"prog\\projects\\c++\\jrush\\src\\controllers\\bot.h"
+			],
+			[
+				"vicp",
+				"prog\\projects\\c++\\jrush\\src\\graphics\\view.cpp"
+			],
+			[
+				"towncp",
+				"prog\\projects\\c++\\jrush\\src\\core\\town.cpp"
+			],
+			[
+				"level",
+				"prog\\projects\\c++\\jrush\\src\\config\\levels.cpp"
+			],
+			[
+				"botcp",
+				"prog\\projects\\c++\\jrush\\src\\controllers\\bot.cpp"
+			],
+			[
+				"bot",
+				"prog\\projects\\c++\\game\\src\\controllers\\bot.h"
+			],
+			[
+				"inter",
+				"prog\\projects\\c++\\jrush\\src\\core\\interfaces.h"
+			],
+			[
+				"527",
+				"prog\\acm\\cf\\527B.cpp"
+			],
+			[
+				"tmp",
+				"prog\\terms\\2\\lections\\Examples\\tmp.cpp"
+			],
+			[
+				"diction",
+				"prog\\projects\\c++\\vocabulary\\core\\dictionary.h"
+			],
+			[
+				"test.cpp",
+				"prog\\projects\\c++\\vocabulary\\test.cpp"
+			],
+			[
+				"databaseh",
+				"prog\\projects\\c++\\dbtest\\dbtest\\dbwrapper\\database.h"
+			],
+			[
+				"stringsmain",
+				"fpmi\\assemble\\strings\\strings\\main.cpp"
+			],
+			[
+				"fucntions.asm",
+				"fpmi\\assemble\\array\\array\\functions.asm"
+			],
+			[
+				"functions.asm",
+				"fpmi\\assemble\\array\\array\\functions.asm"
+			],
+			[
+				"test",
+				"cpp\\trash\\test.cpp"
+			],
+			[
+				"trashtes",
+				"cpp\\trash\\test.cpp"
+			],
+			[
+				"word",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\word.h"
+			],
+			[
+				"2-6adja",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\adjacency.h"
+			],
+			[
+				"2-6conf",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\config.h"
+			],
+			[
+				"en",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\en.txt"
+			],
+			[
+				"-",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\word.tpp"
+			],
+			[
+				"2-6main",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\main.cpp"
+			],
+			[
+				"surfac",
+				"git\\rj\\src\\config\\surface.h"
+			],
+			[
+				"the",
+				"git\\rj\\src\\core\\thewayithink.h"
+			],
+			[
+				"con",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\container.h"
+			],
+			[
+				"contatp",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\container.tpp"
+			],
+			[
+				"container",
+				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\container.h"
+			],
+			[
+				"c+1",
+				"fpmi\\theory\\C++\\Ассемблер_Обработка_чисел\\1.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 253.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

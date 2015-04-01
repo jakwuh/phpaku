@@ -1,0 +1,12 @@
+{
+    "name": "james/test",
+    "authors": [
+        {
+            "name": "James",
+            "email": "akwuh@mail.ru"
+        }
+    ],
+    "require": {
+        "symfony/yaml": "~2.6"
+    }
+}
