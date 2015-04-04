@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"load",
+				"loadArticle"
+			],
+			[
+				"Art",
+				"ArticleForm"
+			],
+			[
 				"Pa",
 				"params"
 			],
@@ -360,10 +368,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/core/controller/Kernel.php",
+			"file": "/D/work/prog/projects/c++/jrush/src/controllers/bot.cpp",
 			"settings":
 			{
-				"buffer_size": 1837,
+				"buffer_size": 624,
 				"line_ending": "Windows"
 			}
 		}
@@ -375,8 +383,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 337.0,
-		"last_filter": "htm",
+		"height": 294.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -583,6 +591,19 @@
 		"height": 359.0,
 		"history":
 		[
+			"print(\"\\n\"*100)",
+			"195.50.31.212",
+			"172.24.49.82",
+			"10.167.12.109",
+			"exit",
+			"end",
+			"start",
+			"d",
+			"subl --help",
+			"git status",
+			"git",
+			"cls",
+			"cmd",
 			"clear",
 			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
@@ -600,59 +621,73 @@
 	[
 		"/C/xampp/htdocs/test",
 		"/C/xampp/htdocs/test/src",
-		"/C/xampp/htdocs/test/web"
+		"/C/xampp/htdocs/test/src/app",
+		"/C/xampp/htdocs/test/src/app/controller",
+		"/C/xampp/htdocs/test/src/core",
+		"/C/xampp/htdocs/test/src/core/model",
+		"/C/xampp/htdocs/test/src/core/model/exception"
 	],
 	"file_history":
 	[
-		"/C/Program Files/Sublime Text 3/sublime.bat",
+		"/D/work/prog/projects/c++/jrush/src/main.cpp",
+		"/D/media/soft/cmd/jrush.bat",
+		"/D/work/prog/projects/c++/jrush/skills_to_show.txt",
+		"/C/Users/James/Desktop/Новый текстовый документ (2).txt",
+		"/C/Users/James/Desktop/changes/functions.h",
+		"/D/media/soft/cmd/xampp.bat",
+		"/C/xampp/htdocs/test/src/app/controller/HomeController.php",
+		"/C/xampp/htdocs/test/src/app/controller/NewsController.php",
+		"/C/xampp/htdocs/test/src/core/model/View.php",
+		"/C/xampp/htdocs/test/src/core/model/form/Form.php",
+		"/C/xampp/htdocs/test/resources/views/article_edit.phtml",
+		"/C/xampp/htdocs/test/resources/translations/ru.yml",
+		"/C/xampp/htdocs/test/src/core/controller/Kernel.php",
 		"/C/xampp/htdocs/test/src/errors.log",
 		"/C/xampp/htdocs/test/src/core/model/Model.php",
-		"/C/xampp/htdocs/test/src/core/model/Request.php",
+		"/C/xampp/htdocs/test/src/app/model/ArticleForm.php",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/xampp/htdocs/test/src/core/model/form/DateField.php",
+		"/C/xampp/htdocs/test/src/core/model/exception/NotFoundException.php",
+		"/C/xampp/htdocs/test/src/core/model/exception/NotFoundExceptino.php",
 		"/C/xampp/htdocs/test/src/app/controller/GalleryController.php",
+		"/C/xampp/htdocs/test/src/core/controller/Router.php",
+		"/C/xampp/htdocs/test/src/core/model/form/TextField.php",
+		"/C/xampp/htdocs/test/src/core/model/Collection.php",
+		"/C/xampp/htdocs/test/src/core/model/Container.php",
+		"/C/xampp/htdocs/test/src/app/model/Article.php",
+		"/C/xampp/htdocs/test/src/core/model/Request.php",
+		"/C/xampp/htdocs/test/config/config.yml",
+		"/C/xampp/htdocs/test/README.md",
+		"/C/xampp/htdocs/test/src/core/controller/Connection.php",
+		"/C/Program Files/Sublime Text 3/sublime.bat",
 		"/C/xampp/htdocs/test/src/core/model/exception/ApplicationException.php",
 		"/C/xampp/htdocs/test/src/core/model/exception/RequestException.php",
-		"/C/xampp/htdocs/test/src/core/model/Container.php",
 		"/C/xampp/htdocs/test/src/core/model/exception/Exception.php",
 		"/C/xampp/htdocs/test/src/core/model/exception/DatabaseException.php",
-		"/C/xampp/htdocs/test/src/core/controller/Connection.php",
 		"/C/xampp/htdocs/test/src/core/controller/Logger.php",
 		"/C/xampp/htdocs/test/src/core/model/Response.php",
-		"/C/xampp/htdocs/test/src/core/controller/Router.php",
-		"/C/xampp/htdocs/test/src/core/model/View.php",
 		"/C/xampp/htdocs/test/resources/views/gallery.phtml",
 		"/C/xampp/htdocs/test/resources/views/footer.phtml",
 		"/C/xampp/htdocs/test/resources/views/header.phtml",
-		"/C/xampp/htdocs/test/resources/translations/ru.yml",
 		"/C/xampp/htdocs/test/src/app/model/ImageCollection.php",
 		"/C/xampp/htdocs/test/src/app/model/Image.php",
-		"/C/xampp/htdocs/test/src/app/model/ArticleForm.php",
 		"/C/xampp/htdocs/test/src/app/model/ArticleCollection.php",
-		"/C/xampp/htdocs/test/src/app/model/Article.php",
-		"/C/xampp/htdocs/test/src/core/controller/Kernel.php",
-		"/C/xampp/htdocs/test/src/core/model/Collection.php",
 		"/C/xampp/htdocs/test/src/core/model/ContainerAware.php",
-		"/C/xampp/htdocs/test/src/core/model/form/DateField.php",
 		"/C/xampp/htdocs/test/src/core/model/form/Field.php",
-		"/C/xampp/htdocs/test/src/core/model/form/Form.php",
 		"/C/xampp/htdocs/test/vendor/symfony/yaml/Symfony/Component/Yaml/Exception/ParseException.php",
 		"/C/xampp/htdocs/test/vendor/symfony/yaml/Symfony/Component/Yaml/Parser.php",
 		"/C/xampp/htdocs/test/resources/views/home.phtml",
 		"/C/xampp/htdocs/test/resources/views/error.phtml",
 		"/C/Users/James/Downloads/HttpCopy/ReadMe.txt",
-		"/C/xampp/htdocs/test/resources/views/article_edit.phtml",
 		"/C/xampp/htdocs/test/web/app.php",
 		"/C/Program Files/Sublime Text 3/sublime.bar",
 		"/C/Program Files/Sublime Text 3/sublime",
-		"/C/xampp/htdocs/test/README.md",
-		"/C/Users/James/Desktop/Новый текстовый документ (2).txt",
 		"/C/Users/James/Desktop/Новый текстовый документ.txt",
 		"/C/xampp/htdocs/test/src/core/controller/Controller.php",
-		"/C/xampp/htdocs/test/config/config.yml",
 		"/C/xampp/htdocs/test/config/routing.yml",
-		"/C/xampp/htdocs/test/src/app/controller/NewsController.php",
 		"/C/xampp/htdocs/test/resources/views/news.phtml",
 		"/C/xampp/htdocs/test/src/core/model/form/StrictTextField.php",
-		"/C/xampp/htdocs/test/src/core/model/form/TextField.php",
 		"/C/xampp/htdocs/test/src/core/Form.php",
 		"/C/xampp/htdocs/xampp/head.php",
 		"/C/xampp/htdocs/test/resources/views/text_field.phtml",
@@ -670,7 +705,6 @@
 		"/C/xampp/htdocs/test/src/core/model/exception/Exception — копия (3).php",
 		"/C/xampp/htdocs/test/src/core/model/exception/WrongRouteException.php",
 		"/C/xampp/htdocs/test/src/core/model/Exception.php",
-		"/C/xampp/htdocs/test/src/app/controller/HomeController.php",
 		"/C/xampp/htdocs/test/src/core/model/Form/Form.php",
 		"/C/xampp/htdocs/test/src/core/controller/Guard.php",
 		"/C/Users/James/Downloads/jQuery-File-Upload-9.9.3/jQuery-File-Upload-9.9.3/server/php/UploadHandler.php",
@@ -722,16 +756,7 @@
 		"/C/xampp/htdocs/test/src/controllers/HomeController.php",
 		"/C/Users/James/AppData/Local/Temp/_tc/tr/taskroom.ru/web/app.php",
 		"/C/Users/James/Desktop/WinApi Introduction.cpp",
-		"/C/Users/James/Desktop/MFC.cpp",
-		"/C/Users/James/Desktop/Templates.cpp",
-		"/C/Users/James/Desktop/Exception.cpp",
-		"/D/work/prog/projects/web/wf/code/src/AppBundle/Controller/ContactController.php",
-		"/C/xampp/htdocs/test/vendor/autoload.php",
-		"/C/xampp/htdocs/test/vendor/composer/autoload_real.php",
-		"/C/xampp/htdocs/test/src/resources/views/home.phtml",
-		"/D/work/prog/projects/c++/jrush/src/config/config.cpp",
-		"/D/work/prog/projects/c++/jrush/src/core/town.cpp",
-		"/D/work/prog/projects/c++/jrush/src/core/town.h"
+		"/C/Users/James/Desktop/MFC.cpp"
 	],
 	"find":
 	{
@@ -754,6 +779,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"update",
+			"updated",
+			"connection",
+			"Редактирование",
+			"edit",
+			"fields",
+			"errors",
+			"this",
+			"WrongRouteException",
+			"NotFoundException",
+			"bind",
+			"connection",
+			"ArticleForm",
+			"form",
+			"$this->load",
+			"load",
+			"connection",
 			"this->",
 			"$logger->log",
 			"ERROR:",
@@ -864,24 +906,7 @@
 			"HomeController",
 			"ContainerAware",
 			"HomeController",
-			"get_defined_class",
-			"Controller",
-			"public",
-			"ParameterBag",
-			"private",
-			"method",
-			"ParameterBag",
-			"use",
-			"Core",
-			"string",
-			"ParameterBag",
-			"Error",
-			"__set",
-			"private",
-			"container",
-			"Security",
-			"security",
-			"Logger"
+			"get_defined_class"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -912,25 +937,26 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/core/controller/Kernel.php",
+					"file": "/D/work/prog/projects/c++/jrush/src/controllers/bot.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1837,
+						"buffer_size": 624,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								946,
-								946
+								421,
+								421
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -999,8 +1025,88 @@
 		"selected_items":
 		[
 			[
+				"hom",
+				"src\\app\\controller\\HomeController.php"
+			],
+			[
+				"news",
+				"src\\app\\controller\\NewsController.php"
+			],
+			[
+				"vi",
+				"src\\core\\model\\View.php"
+			],
+			[
+				"ru",
+				"resources\\translations\\ru.yml"
+			],
+			[
+				"form",
+				"src\\core\\model\\form\\Form.php"
+			],
+			[
+				"for",
+				"src\\core\\model\\form\\Form.php"
+			],
+			[
+				"edit",
+				"resources\\views\\article_edit.phtml"
+			],
+			[
+				"log",
+				"src\\errors.log"
+			],
+			[
+				"kerne",
+				"src\\core\\controller\\Kernel.php"
+			],
+			[
+				"model",
+				"src\\core\\model\\Model.php"
+			],
+			[
+				"afo",
+				"src\\app\\model\\ArticleForm.php"
+			],
+			[
+				"sfd",
+				"src\\core\\model\\form\\DateField.php"
+			],
+			[
+				"nec",
+				"src\\app\\controller\\NewsController.php"
+			],
+			[
+				"artfo",
+				"src\\app\\model\\ArticleForm.php"
+			],
+			[
+				"nto",
+				"src\\core\\model\\exception\\NotFoundExceptino.php"
+			],
+			[
+				"not",
+				"src\\core\\model\\exception\\NotFoundExceptino.php"
+			],
+			[
+				"newco",
+				"src\\app\\controller\\NewsController.php"
+			],
+			[
 				"err",
 				"src\\errors.log"
+			],
+			[
+				"rout",
+				"src\\core\\controller\\Router.php"
+			],
+			[
+				"artph",
+				"src\\app\\model\\Article.php"
+			],
+			[
+				"conf",
+				"config\\config.yml"
 			],
 			[
 				"app",
@@ -1023,20 +1129,12 @@
 				"src\\core\\model\\exception\\Exception.php"
 			],
 			[
-				"log",
-				"src\\core\\controller\\Logger.php"
-			],
-			[
 				"conn",
 				"src\\core\\controller\\Connection.php"
 			],
 			[
 				"route",
 				"src\\core\\controller\\Router.php"
-			],
-			[
-				"vi",
-				"src\\core\\model\\View.php"
 			],
 			[
 				"connn",
@@ -1065,10 +1163,6 @@
 			[
 				"foo",
 				"resources\\views\\footer.phtml"
-			],
-			[
-				"ru",
-				"resources\\translations\\ru.yml"
 			],
 			[
 				"head",
@@ -1107,10 +1201,6 @@
 				"resources\\views\\footer.phtml"
 			],
 			[
-				"edit",
-				"resources\\views\\article_edit.phtml"
-			],
-			[
 				"kern",
 				"src\\core\\controller\\Kernel.php"
 			],
@@ -1123,20 +1213,8 @@
 				"config\\routing.yml"
 			],
 			[
-				"hom",
-				"resources\\views\\home.phtml"
-			],
-			[
-				"news",
-				"resources\\views\\news.phtml"
-			],
-			[
 				"frm",
 				"src\\core\\model\\form\\Form.php"
-			],
-			[
-				"artfo",
-				"src\\app\\model\\ArticleForm.php"
 			],
 			[
 				"mo",
@@ -1145,18 +1223,6 @@
 			[
 				"arti",
 				"src\\app\\model\\Article.php"
-			],
-			[
-				"form",
-				"src\\core\\model\\form\\Form.php"
-			],
-			[
-				"for",
-				"src\\core\\model\\form\\Form.php"
-			],
-			[
-				"model",
-				"src\\core\\model\\Model.php"
 			],
 			[
 				"stri",
@@ -1197,10 +1263,6 @@
 			[
 				"requ",
 				"src\\core\\model\\Request.php"
-			],
-			[
-				"newco",
-				"src\\app\\controller\\NewsController.php"
 			],
 			[
 				"fi",
@@ -1293,10 +1355,6 @@
 			[
 				"roer",
 				"src\\core\\controller\\Router.php"
-			],
-			[
-				"conf",
-				"config\\config.yml"
 			],
 			[
 				"homeco",
@@ -1477,38 +1535,6 @@
 			[
 				"artcle",
 				"src\\app\\model\\Article.php"
-			],
-			[
-				"rut",
-				"config\\routing.yml"
-			],
-			[
-				"cnfig",
-				"config\\config.yml"
-			],
-			[
-				"viw",
-				"src\\core\\model\\View.php"
-			],
-			[
-				"kerne",
-				"src\\core\\controller\\Kernel.php"
-			],
-			[
-				"rou",
-				"src\\core\\controller\\Router.php"
-			],
-			[
-				"ro",
-				"config\\routing.yml"
-			],
-			[
-				"conawa",
-				"src\\core\\model\\ContainerAware.php"
-			],
-			[
-				"rout",
-				"src\\core\\controller\\Router.php"
 			]
 		],
 		"width": 0.0

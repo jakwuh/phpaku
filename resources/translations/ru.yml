@@ -26,12 +26,14 @@ slider:
         second: Перейти к новостям
         third: Добавить новость
     caption:
-        first: Внимание!
-        second: Это оно!
-        third: Как раз то, что Вы искали
+        first: Это как раз то...
+        second: ...что Вы...
+        third: ...так долго искали
     content:
         first: >
-           Из-за ограничений браузера при просмотре с localhost стрелки слева могут быть загружены некорректно или не загружены
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         second: >
             Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
