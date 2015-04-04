@@ -23,14 +23,13 @@ class Kernel extends ContainerAware
 		try {
 			$this->container = new Container();
 			$this->loadSettings();
-			
 			$this->logger = new Logger($this->container);
 			$this->router = new Router($this->container);
 			$this->guard = new Guard($this->container);
 			$this->connection = new Connection($this->container);
 		} catch (Exception $e) {
 			$logger = new Logger(new Container());
-			$logger->log($this, "Fatal Error in " . __FILE__ . " on " . __LINE__);
+			$logger->log($this, "Fatal Error in file " . __FILE__ . " on line " . __LINE__);
 			$view = new View($this->container, "error");
 			$view->set("message", "default");
 			$view->render();

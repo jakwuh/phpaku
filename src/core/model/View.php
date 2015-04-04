@@ -5,8 +5,8 @@ namespace Aku\Core\Model;
 use Aku\Core\Model\Container;
 use Aku\Core\Model\ContainerAware;
 use Symfony\Component\Yaml\Yaml;
-class View extends ContainerAware
 
+class View extends ContainerAware
 {
 
 	private $template;
@@ -110,15 +110,15 @@ class View extends ContainerAware
 			return null;
 	}
 
-	public function out($key)
-	{
-		echo $this->get($key);
-	}
-
 	public function set($key, $value)
 	{
 		$this->args[$key] = $value;
 		return $this;
+	}
+
+	public function out($key)
+	{
+		echo $this->get($key);
 	}
 
 }

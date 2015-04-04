@@ -335,14 +335,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Users/James/Desktop/Новый текстовый документ (2).txt",
-			"settings":
-			{
-				"buffer_size": 32,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -575,11 +567,15 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/test",
-		"/C/xampp/htdocs/test/src",
-		"/C/xampp/htdocs/test/src/core/controller"
+		"/C/xampp/htdocs/test/src"
 	],
 	"file_history":
 	[
+		"/C/Program Files/Sublime Text 3/sublime.bat",
+		"/C/Program Files/Sublime Text 3/sublime.bar",
+		"/C/Program Files/Sublime Text 3/sublime",
+		"/C/xampp/htdocs/test/README.md",
+		"/C/Users/James/Desktop/Новый текстовый документ (2).txt",
 		"/C/Users/James/Desktop/Новый текстовый документ.txt",
 		"/C/xampp/htdocs/test/src/core/controller/Kernel.php",
 		"/C/xampp/htdocs/test/src/core/controller/Controller.php",
@@ -702,12 +698,7 @@
 		"/D/work/prog/projects/c++/jrush/src/graphics/view.cpp",
 		"/D/work/prog/projects/c++/game/src/core/view.cpp",
 		"/D/media/soft/install/MISC/KMSAuto Net 2014 v1.2.4 Portable RU Активатор office VL/KMSAuto Net 2014 v1.2.4 Portable RU/readme_ru.txt",
-		"/D/work/prog/projects/c++/game/src/controllers/bot.h",
-		"/D/work/prog/projects/c++/jrush/src/core/application.h",
-		"/D/work/prog/acm/acmp/main.cpp",
-		"/D/work/prog/terms/2/theory/C++/Ассемблер_подпрограммы/ПримерWIN32/MSGBOX.ASM",
-		"/D/work/prog/projects/c++/jrush/src/core/tmp.cpp",
-		"/D/work/prog/projects/c++/jrush/src/controllers/player.h"
+		"/D/work/prog/projects/c++/game/src/controllers/bot.h"
 	],
 	"find":
 	{
@@ -879,37 +870,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/James/Desktop/Новый текстовый документ (2).txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 32,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								32,
-								32
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
