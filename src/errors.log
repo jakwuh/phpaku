@@ -22,3 +22,5 @@
 [05-04-15 00:22:12] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff2
 [05-04-15 00:22:13] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff
 [05-04-15 00:22:13] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.ttf
+[05-04-15 00:31:16] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/img/play-pause.svg
+[05-04-15 00:31:16] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/img/loading.gif

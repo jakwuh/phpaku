@@ -27,7 +27,7 @@ abstract class Form
 		else if (array_key_exists($key, $this->args))
 			return $this->args[$key];
 		else
-			throw new ApplicationException("try to access unexisting property:" . $key);
+			return null;
 	}
 
 	public function out($key)

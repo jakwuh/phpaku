@@ -23,9 +23,9 @@ class NewsController extends Controller
 		return $view;
 	}
 
-	public function showAction()
+	public function showAction(Article $article  = null)
 	{
-		$article = $this->loadArticle();
+		if (!$article) $article = $this->loadArticle();
 		$view = new View($this->container, "article");
 		$view->set("article", $article);
 		return $view;
@@ -68,7 +68,7 @@ class NewsController extends Controller
 		$updated = $article->update($this->get("connection"));
 		if (!$updated) throw new ApplicationException("cannot update article");
 
-		return $this->renderForm($this->loadArticle());
+		return $this->showAction($this->loadArticle());
 	}
 
 	public function loadArticle($id = null)
@@ -87,10 +87,8 @@ class NewsController extends Controller
 	{
 		if (!$form) $form = new ArticleForm();
 		if ($article) {
-			$form->bind("id", $article->get("id"));
 			$form->bindFromModel($article);
-		} else {
-			$form->bind("id", 0);
+			$form->bind("id", $article->get("id"));
 		}
 		$view = new View($this->container, "article_edit");
 		$view->set("form", $form);
