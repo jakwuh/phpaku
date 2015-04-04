@@ -20,13 +20,11 @@ class Connection
 		$password = $container->get("settings")["db_password"];
 		$this->mysqli = new \mysqli($host, $user, $password, $database);
 
-		if ($this->mysqli->connect_errno) {
+		if ($this->mysqli->connect_errno)
 			throw new ApplicationException("cannot create connection: " . $this->mysqli->connect_error);
-		}
 
-		if (!$this->mysqli->set_charset("utf8")) {
+		if (!$this->mysqli->set_charset("utf8"))
 			throw new ApplicationException("cannot set charset: " . $this->mysqli->connect_error);
-		}
 	}
 
 	public function saveModel(Model $model)
@@ -45,11 +43,7 @@ class Connection
 		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types_string), $references));
 		
 		$result = $stmt->execute();
-
-		if ($result) {
-			return true;
-		}
-		return false;
+		return $result;
 	}
 
 	public function selectModel(Model $model)

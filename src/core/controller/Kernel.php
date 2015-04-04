@@ -63,12 +63,11 @@ class Kernel extends ContainerAware
 
 	public function __get($key)
 	{
-		return $this->container->get($key);
+		return $this->get($key);
 	}
 
 	public function __set($key, $value)
 	{
-		$this->container->set($key, $value);
-		return $this;
+		return $this->set($key, $value);
 	}
 }
