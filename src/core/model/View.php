@@ -5,6 +5,7 @@ namespace Aku\Core\Model;
 use Aku\Core\Model\Container;
 use Aku\Core\Model\ContainerAware;
 use Symfony\Component\Yaml\Yaml;
+use Aku\Core\Model\Exception\ApplicationException;
 
 class View extends ContainerAware
 {
@@ -12,13 +13,17 @@ class View extends ContainerAware
 	private $template;
 	private $translations;
 	private $args;
+	private $response_code;
 
-	public function __construct(Container $container, $template)
+	function __construct(Container $container, $template)
 	{
 		$this->container = $container;
-		// ERROR: file does not exist
 		$this->template = $this->generateTemplatePath($template);
-		$this->translations = Yaml::parse(file_get_contents($this->generateTranslationPath()));
+		$path = $this->generateTranslationPath();
+		$content = file_get_contents($path);
+		if ($content === false)
+			throw new ApplicationException("try to open unexisting file: " . $path);
+		$this->translations = Yaml::parse($content);
 		$this->args = array();
 	}
 
@@ -48,7 +53,8 @@ class View extends ContainerAware
 	{
 		$get = function(&$var){ return $var; };
 		$routes = $this->container->get("router")->routes;
-		// ERROR: route does not exist
+		if (!array_key_exists($route_name, $routes))
+			throw new ApplicationException("try to use unexisting route: " . $route_name);
 		$route = $routes[$route_name];
 		$subject = array_key_exists("generator", $route) ? $route["generator"] : $route["path"];
 		$callback = function($matches) use ($args, $get) { return $get($args[$matches[1]]); };
@@ -107,7 +113,12 @@ class View extends ContainerAware
 		if (array_key_exists($key, $this->args))
 			return $this->args[$key];
 		else 
-			return null;
+			throw new ApplicationException("try to access unexisting property: \$this->" . $key);
+	}
+
+	public function has($key)
+	{
+		return array_key_exists($key, $this->args);
 	}
 
 	public function set($key, $value)
@@ -115,10 +126,4 @@ class View extends ContainerAware
 		$this->args[$key] = $value;
 		return $this;
 	}
-
-	public function out($key)
-	{
-		echo $this->get($key);
-	}
-
 }

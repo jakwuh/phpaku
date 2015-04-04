@@ -11,7 +11,7 @@ abstract class Collection
 	public $models;
 	protected $extra_statement;
 
-	public function __construct()
+	function __construct()
 	{
 		$this->condition = "";
 		$this->models = array();

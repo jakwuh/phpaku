@@ -4,13 +4,9 @@
 			<p>&copy; <?php echo $this->translate("company"); ?> &middot;</p>
 		</footer>
 	</div>
-
  	<script src="<?php $this->echoAsset("js/jquery.min.js"); ?>"></script>
  	<script src="<?php $this->echoAsset("js/bootstrap.min.js"); ?>"></script>
- 	<?php 
-		if ($this->scripts) {
-			echo $this->scripts;
-		} 
- 	?>
+ 	<?php if ($this->has("scripts") && $this->scripts) echo $this->scripts; ?>
+	
 	</body>
 	</html>

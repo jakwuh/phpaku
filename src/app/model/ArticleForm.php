@@ -9,7 +9,7 @@ use Aku\Core\Model\Form\StrictTextField;
 
 class ArticleForm extends Form
 {
-	public function __construct()
+	function __construct()
 	{
 		parent::__construct();
 		$this->fields["id"] = new IntField("id");

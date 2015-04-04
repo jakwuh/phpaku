@@ -1,4 +1,4 @@
-company: StudyQA
+company: &company_name StudyQA
 
 error: Ошибка
 error_home: На главную
@@ -13,6 +13,7 @@ menu:
     gallery: Галерея
 
 misc:
+    default_title: *company_name
     modal_prev: Назад
     modal_next: Вперед
     details: Подробнее

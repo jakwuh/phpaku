@@ -8,7 +8,7 @@ abstract class Field
 	public $value;
 	public $error;
 
-	public function __construct($name)
+	function __construct($name)
 	{
 		$this->name = $name;
 	}

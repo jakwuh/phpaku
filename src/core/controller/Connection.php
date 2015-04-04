@@ -12,20 +12,20 @@ class Connection
 
 	private $mysqli;
 
-	public function __construct(Container $container)
+	function __construct(Container $container)
 	{
 		$host = $container->get("settings")["db_host"];
 		$database = $container->get("settings")["db_name"];
 		$user = $container->get("settings")["db_user"];
 		$password = $container->get("settings")["db_password"];
 		$this->mysqli = new \mysqli($host, $user, $password, $database);
+
 		if ($this->mysqli->connect_errno) {
-			$container->get("logger")->log($this, $this->mysqli->connect_error);
-			throw new ApplicationException();
+			throw new ApplicationException("cannot create connection: " . $this->mysqli->connect_error);
 		}
+
 		if (!$this->mysqli->set_charset("utf8")) {
-			$container->get("logger")->log($this, $this->mysqli->connect_error);
-			throw new ApplicationException();
+			throw new ApplicationException("cannot set charset: " . $this->mysqli->connect_error);
 		}
 	}
 
@@ -41,7 +41,7 @@ class Connection
 		$omits = "?" . implode( "", array_pad(array(), count($fields) - 1, ",?"));
 		
 		$stmt = $this->mysqli->prepare("INSERT INTO {$table} VALUES ({$omits})");
-		if (!$stmt) throw new ApplicationException();
+		if (!$stmt) throw new ApplicationException("cannot prepare statement");
 		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types_string), $references));
 		
 		$result = $stmt->execute();
@@ -60,7 +60,7 @@ class Connection
 		$extra = $model->getExtraStatement();
 
 		$stmt = $this->mysqli->prepare("SELECT {$fields} FROM {$table} WHERE {$condition} {$extra}");
-		if (!$stmt) throw new ApplicationException();
+		if (!$stmt) throw new ApplicationException("cannot prepare statement");
 		$stmt->execute();
 
 		$result = $stmt->get_result();
@@ -89,7 +89,7 @@ class Connection
 		$omits = implode( ",", array_map(function($name){ return "{$name}=?"; }, $fields));
 		
 		$stmt = $this->mysqli->prepare("UPDATE {$table} SET {$omits} WHERE {$condition}");
-		if (!$stmt) throw new ApplicationException();
+		if (!$stmt) throw new ApplicationException("cannot prepare statement");
 		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types_string), $references));
 
 		$result = $stmt->execute();
@@ -109,7 +109,7 @@ class Connection
 			$query = "SELECT {$fields} FROM {$table} WHERE {$condition} {$extra}";
 
 		$stmt = $this->mysqli->prepare($query);
-		if (!$stmt) throw new ApplicationException();
+		if (!$stmt) throw new ApplicationException("cannot prepare statement");
 		$stmt->execute();
 
 		$result = $stmt->get_result();

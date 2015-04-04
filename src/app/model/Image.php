@@ -10,7 +10,7 @@ use Aku\Core\Model\Form\DateField;
 
 class Image extends Model
 {
-	public function __construct(array $fields = array())
+	function __construct(array $fields = array())
 	{
 		$this->fields = $this->build();
 		parent::__construct($fields);

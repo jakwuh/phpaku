@@ -12,7 +12,7 @@ abstract class Form
 	protected $fields;
 	public $errors;
 
-	public function __construct()
+	function __construct()
 	{
 		$this->fields = array();
 		$this->errors = array();

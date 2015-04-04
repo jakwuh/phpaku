@@ -8,7 +8,7 @@ class ContainerAware
 {
 	protected $container;
 
-	public function __construct(Container $container)
+	function __construct(Container $container)
 	{
 		$this->container = $container;
 	}

@@ -6,25 +6,15 @@ use Aku\Core\Model\Container;
 
 class Logger
 {
-	private $file;
-
-	public function __construct(Container $container)
+	public static function log(\Exception $e)
 	{
-		$this->file = fopen(PATH_ROOT . "/src/errors.log", "a");
-	}
-
-	public function log($object, $string = null)
-	{
+		$file = fopen(PATH_ROOT . "/src/errors.log", "a");
 		$time = new \DateTime();
 		$string =
-			"[" . $time->format("d-m-y H:i:s") . "] "
-			. get_class($object) ." : " . $string . "\n";
+			"[" . $time->format("d-m-y H:i:s") . "] " .
+			$e->getFile() . " : " . $e->getLine() . ": " . $e->getMessage() . "\n";
 
-		fwrite($this->file, $string);
-	}
-
-	public function __destruct()
-	{
-		fclose($this->file);
+		fwrite($file, $string);
+		fclose($file);
 	}
 }

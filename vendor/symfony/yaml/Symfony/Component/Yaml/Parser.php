@@ -33,7 +33,7 @@ class Parser
      *
      * @param int $offset The offset of YAML document (used for line numbers in error messages)
      */
-    public function __construct($offset = 0)
+    function __construct($offset = 0)
     {
         $this->offset = $offset;
     }

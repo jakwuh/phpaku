@@ -18,7 +18,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class Kernel extends ContainerAware
 {
-	public function __construct()
+	function __construct()
 	{
 		try {
 			$this->container = new Container();
@@ -27,14 +27,12 @@ class Kernel extends ContainerAware
 			$this->router = new Router($this->container);
 			$this->guard = new Guard($this->container);
 			$this->connection = new Connection($this->container);
-		} catch (Exception $e) {
-			$logger = new Logger(new Container());
-			$logger->log($this, "Fatal Error in file " . __FILE__ . " on line " . __LINE__);
-			$view = new View($this->container, "error");
-			$view->set("message", "default");
-			$view->render();
-			die();
+			return;
+		} catch (\Exception $e) {
+			Logger::log($e);
+			Response::sendError("default", 500, $this->container);
 		}
+		die();
 	}
 
 	private function loadSettings()
@@ -49,24 +47,18 @@ class Kernel extends ContainerAware
 			$response = $this->router->match($request);
 			$this->request = $request;
 			$response->process($this->container);
+			return $response;
 		} catch (NotFoundException $e) {
-			$view = new View($this->container, "error");
-			$view->set("message", "not_found");
-			$view->render();
-			die();
+			Logger::log($e);
+			Response::sendError("not_found", 404, $this->container);
 		} catch (WrongRouteException $e) {
-			$view = new View($this->container, "error");
-			$view->set("message", "wrong_route");
-			$view->render();
-			die();
-		} catch (Exception $e) {
-			$view = new View($this->container, "error");
-			$view->set("message", "default");
-			$view->render();
-			die();
+			Logger::log($e);
+			Response::sendError("wrong_route", 404, $this->container);
+		} catch (\Exception $e) {
+			Logger::log($e);
+			Response::sendError("default", 500, $this->container);
 		}
-		
-		return $response;
+		die();
 	}
 
 	public function __get($key)

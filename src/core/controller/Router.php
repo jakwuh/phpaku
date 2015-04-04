@@ -49,7 +49,7 @@ class Router extends ContainerAware
 				break;
 			}
 		}
-		if (!$found) throw new WrongRouteException();
+		if (!$found) throw new WrongRouteException("route not found: " . $request->get("path"));
 		return $response;
 	}
 }

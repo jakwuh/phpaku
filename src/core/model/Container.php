@@ -7,7 +7,7 @@ class Container
 
 	private $attributes;
 
-	public function __construct(array $attributes = array())
+	function __construct(array $attributes = array())
 	{
 		$this->attributes = $attributes;
 	}

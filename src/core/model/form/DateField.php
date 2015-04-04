@@ -7,7 +7,7 @@ use Aku\Core\Model\Form\Field;
 class DateField extends Field
 {
 
-	public function __construct($name)
+	function __construct($name)
 	{
 		parent::__construct($name);
 		$this->value = new \DateTime();

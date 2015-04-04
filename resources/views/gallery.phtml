@@ -4,11 +4,17 @@
 
     <div class="jumbotron" style="margin-top: 80px;">
         <div id="links">
-            <?php foreach ($this->images as $image) { ?>
-                <a href="<?php $this->echoImage($image); ?>" data-gallery>
-                    <img width="50" height="50" src="<?php $this->echoThumbnail($image); ?>">
-                </a>
-            <?php } ?>
+            <?php 
+                if ($this->has("images")) {
+                    foreach ($this->images as $image) { 
+            ?>
+                        <a href="<?php $this->echoImage($image); ?>" data-gallery>
+                            <img width="50" height="50" src="<?php $this->echoThumbnail($image); ?>">
+                        </a>
+            <?php 
+                    }
+                } 
+            ?>
             <span class="btn btn-success fileinput-button">
                 <span><?php echo $this->translate("gallery.add") ?></span>
                 <input id="fileupload" type="file" name="files[]" data-url="<?php $this->echoLink("gallery_server"); ?>" multiple="">

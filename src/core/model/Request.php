@@ -6,7 +6,7 @@ use Aku\Core\Model\ContainerAware;
 
 class Request extends ContainerAware
 {
-	public function __construct()
+	function __construct()
 	{
 		$this->container = new Container();
 	}

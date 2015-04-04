@@ -3,6 +3,7 @@
 namespace Aku\Core\Model;
 
 use Aku\Core\Controller\Connection;
+use Aku\Core\Model\Exception\ApplicationException;
 
 abstract class Model
 {
@@ -10,7 +11,7 @@ abstract class Model
 	protected $fields;
 	protected $extra_statement;
 
-	public function __construct(array $fields)
+	function __construct(array $fields)
 	{
 		foreach ($fields as $key => $value) {
 			$this->fields[$key]->set($value);
@@ -22,8 +23,8 @@ abstract class Model
 	{
 		if ($this->has($key))
 			$this->fields[$key]->set($value);
-		else ;
-			// :ERROR
+		else
+			throw new ApplicatinoException("try to set unexisting property: \$this->" . $key);
 		return $this;
 	}
 
@@ -31,16 +32,16 @@ abstract class Model
 	{
 		if ($this->has($key))
 			return $this->fields[$key]->get();
-		else ;
-			// ERROR:
+		else 
+			throw new ApplicatinoException("try to get unexisting property: \$this->" . $key);
 	}
 
 	public function raw($key)
 	{
 		if ($this->has($key))
 			return $this->fields[$key]->raw();
-		else ;
-			// ERROR:
+		else
+			throw new ApplicatinoException("try to get unexisting property: \$this->" . $key);
 	}
 
 	public function has($key)
@@ -52,8 +53,8 @@ abstract class Model
 	{
 		if ($this->has($key))
 			return $this->fields[$key]->getType();
-		else ;
-			// ERROR:
+		else
+			throw new ApplicatinoException("try to get unexisting property: \$this->" . $key);
 	}
 
 	public function update(Connection $connection)
