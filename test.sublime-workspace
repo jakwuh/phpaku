@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"fun	function …"
+			],
+			[
+				"templa",
+				"template_dir"
+			],
+			[
+				"Co",
+				"ContainerAware"
+			],
+			[
+				"Cont",
+				"ContrainerAware"
+			],
+			[
+				"getclas",
+				"get_declared_classes"
+			],
+			[
+				"cla",
+				"classname"
+			],
+			[
+				"Con",
+				"Container"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
+				"clas",
+				"classes"
+			],
+			[
+				"conta",
+				"container"
+			],
+			[
 				"clea",
 				"clearViews"
 			],
@@ -148,10 +188,6 @@
 				"DictionaryConfig"
 			],
 			[
-				"conta",
-				"Container"
-			],
-			[
 				"item",
 				"item_part"
 			],
@@ -267,10 +303,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 78.0,
-		"last_filter": "c1",
+		"height": 41.0,
+		"last_filter": "php",
 		"selected_items":
 		[
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"c1",
 				"Set Syntax: C++11"
@@ -392,10 +436,6 @@
 				"Package Control: List Unmanaged Packages"
 			],
 			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
 				"remo",
 				"Package Control: Remove Package"
 			],
@@ -432,13 +472,14 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 408.0
+		"width": 480.0
 	},
 	"console":
 	{
 		"height": 359.0,
 		"history":
 		[
+			"clear",
 			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -453,11 +494,59 @@
 	},
 	"expanded_folders":
 	[
-		"/D/work"
+		"/C/xampp/htdocs/test",
+		"/C/xampp/htdocs/test/resources",
+		"/C/xampp/htdocs/test/resources/views",
+		"/C/xampp/htdocs/test/src",
+		"/C/xampp/htdocs/test/src/core",
+		"/C/xampp/htdocs/test/src/core/Controller",
+		"/C/xampp/htdocs/test/src/core/model",
+		"/C/xampp/htdocs/test/web"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/test/src/core/Kernel.php",
+		"/C/xampp/htdocs/test/src/core/View.php",
+		"/C/xampp/htdocs/test/src/controller/HomeController.php",
+		"/C/xampp/htdocs/test/src/core/Response.php",
+		"/C/xampp/htdocs/test/src/core/Container.php",
+		"/C/xampp/htdocs/test/src/core/ContainerAware.php",
+		"/C/xampp/htdocs/test/src/core/Router.php",
+		"/C/xampp/htdocs/test/src/core/Controller.php",
+		"/C/xampp/htdocs/test/resources/views/home.phtml",
+		"/C/xampp/htdocs/test/web/includes/css/carousel.css",
+		"/C/xampp/htdocs/test/config/config.yml",
+		"/C/xampp/htdocs/test/composer.json",
+		"/C/xampp/htdocs/test/src/core/Request.php",
+		"/C/xampp/htdocs/test/config/routing.yml",
+		"/C/xampp/htdocs/test/vendor/composer/autoload_psr4.php",
+		"/C/xampp/htdocs/test/src/core/Form.php",
 		"/C/xampp/htdocs/test/web/app.php",
+		"/D/work/prog/projects/web/tr/code/src/Tkrm/BaseBundle/Services/EventService.php",
+		"/C/xampp/htdocs/test/src/core/ParameterBag.php",
+		"/D/work/prog/projects/web/tr/code/src/Tkrm/TaskBundle/Resources/config/routing/task.yml",
+		"/D/work/prog/projects/web/tr/code/app/config/routing.yml",
+		"/D/work/prog/projects/web/tr/code/app/config/parameters.yml",
+		"/C/xampp/htdocs/test/tmp/index.html",
+		"/C/xampp/htdocs/test/tmp/gallery.html",
+		"/C/xampp/htdocs/test/tmp/news.html",
+		"/C/xampp/htdocs/test/src/core/Guard.php",
+		"/C/xampp/htdocs/test/src/core/Logger.php",
+		"/C/xampp/htdocs/test/src/core/Security.php",
+		"/C/xampp/htdocs/test/web/.htaccess",
+		"/C/Users/James/AppData/Local/Temp/_tc/wf/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php",
+		"/C/Users/James/AppData/Local/Temp/_tc/wf/web/app.php",
+		"/C/Users/James/AppData/Local/Temp/_tc/tr/taskroom.ru/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php",
+		"/C/xampp/htdocs/test/src/controllers/HomeController.php",
+		"/C/Users/James/AppData/Local/Temp/_tc/tr/taskroom.ru/web/app.php",
+		"/C/Users/James/Desktop/WinApi Introduction.cpp",
+		"/C/Users/James/Desktop/MFC.cpp",
+		"/C/Users/James/Desktop/Templates.cpp",
+		"/C/Users/James/Desktop/Exception.cpp",
+		"/D/work/prog/projects/web/wf/code/src/AppBundle/Controller/ContactController.php",
+		"/C/xampp/htdocs/test/vendor/autoload.php",
+		"/C/xampp/htdocs/test/vendor/composer/autoload_real.php",
+		"/C/xampp/htdocs/test/src/resources/views/home.phtml",
 		"/D/work/prog/projects/c++/jrush/src/config/levels.cpp",
 		"/D/work/prog/projects/c++/jrush/src/config/config.cpp",
 		"/D/work/prog/projects/c++/jrush/src/core/town.cpp",
@@ -543,58 +632,18 @@
 		"/D/work/prog/terms/2/assembly/binary_math/binary_math/functions.h",
 		"/D/work/prog/acm/cf/input.txt",
 		"/D/work/prog/terms/2/assembly/assembly.asm",
-		"/D/work/prog/terms/2/assembly/binary_math/binary_math/functions.cpp",
-		"/D/work/prog/acm/cf/520A.cpp",
-		"/D/work/prog/acm/cf/520B.cpp",
-		"/D/work/prog/acm/algos/searching & sorting/binary_search.cpp",
-		"/D/work/prog/terms/2/theory/examples/Информация/ASSEMBLE/ASM-BOOK/ASM-BRAD/BRAD-I",
-		"/D/work/prog/acm/cf/1B.cpp",
-		"/D/work/prog/acm/cf/527B.cpp",
-		"/D/work/prog/acm/cf/527A.cpp",
-		"/D/work/prog/terms/2/theory/examples/Информация/ASSEMBLE/ASM-BOOK/ASM-BRAD/BRAD-5-2",
-		"/D/work/english/terms/2/киреев/5.doc",
-		"/D/work/prog/terms/2/assembly/array/array/functions.h",
-		"/D/work/prog/acm/cf/1A+.cpp",
-		"/D/work/prog/terms/2/assembly/array/array/main.cpp",
-		"/C/Users/James/Desktop/changes/audit/constructors/string/string.h",
-		"/D/work/prog/terms/2/assembly/strings/strings/functions.h",
-		"/D/work/prog/terms/2/assembly/strings/strings/main.cpp",
-		"/D/work/prog/terms/2/assembly/array/array/functions.asm",
-		"/D/work/prog/terms/2/assembly/array/array/tmp.h",
-		"/D/work/prog/terms/2/lections/Examples/Templates Example #3.cpp",
-		"/D/work/prog/terms/2/lections/Examples/Templates Example #2.cpp",
-		"/D/work/prog/terms/2/lections/Examples/tmp.cpp",
-		"/D/work/prog/projects/web/tr/resources/misc/TkrmParse.js",
-		"/D/work/prog/terms/2/theory/C++/Ассемблер_матрицы/Транспонирование матрицы/transp_matr.cpp",
-		"/D/work/prog/projects/c++/vocabulary/test.cpp",
-		"/D/work/prog/terms/2/lections/Examples/Templates Example #1.cpp",
-		"/D/work/prog/terms/2/lections/Class.cpp",
-		"/E/masm32/procs/query.asm",
-		"/D/work/prog/projects/c++/vocabulary/main.cpp",
-		"/D/work/prog/projects/c++/vocabulary/adapters/database.h",
-		"/D/work/prog/projects/c++/vocabulary/adapters/database.cpp",
-		"/D/work/prog/projects/c++/vocabulary/containers/container.h",
-		"/D/work/prog/projects/c++/vocabulary/containers/container.cpp",
-		"/D/work/prog/projects/c++/vocabulary/adapters/statement.cpp",
-		"/D/work/prog/projects/c++/vocabulary/adapters/statement.h",
-		"/D/work/prog/projects/c++/vocabulary/containers/wordset.cpp",
-		"/D/work/prog/projects/c++/vocabulary/containers/wordset.h",
-		"/D/work/prog/projects/c++/vocabulary/core/errors.h",
-		"/D/work/prog/projects/c++/game/src/main.cpp",
-		"/D/work/english/terms/2/english.txt",
-		"/D/work/prog/tmp/main.cpp",
-		"/D/work/prog/tmp/test.cpp",
-		"/D/work/prog/terms/2/lections/Examples/Class Example #11 - Interface.cpp"
+		"/D/work/prog/terms/2/assembly/binary_math/binary_math/functions.cpp"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
 		"height": 104.0,
 		"where_history":
 		[
+			"C:\\xampp\\htdocs\\test",
 			"D:\\work\\prog\\projects\\c++\\jrush"
 		]
 	},
@@ -603,6 +652,70 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"myCarousel",
+			"right",
+			"arouse",
+			"myCarousel",
+			"carousel2",
+			"myCarousel",
+			"carousel1",
+			"ParameterBag",
+			"HomeController",
+			"ContainerAware",
+			"HomeController",
+			"get_defined_class",
+			"Controller",
+			"public",
+			"ParameterBag",
+			"private",
+			"method",
+			"ParameterBag",
+			"use",
+			"Core",
+			"string",
+			"ParameterBag",
+			"Error",
+			"__set",
+			"private",
+			"container",
+			"Security",
+			"security",
+			"Logger",
+			"logger",
+			"Logger",
+			"logger",
+			"W3C",
+			"COOKIE",
+			"$container",
+			"container",
+			"$file",
+			"file",
+			"this->container",
+			"container",
+			"public",
+			"server",
+			"parse_url",
+			"setFactory",
+			"requestFactory",
+			"createRequestFromFactory",
+			"array",
+			"objects",
+			"attributes",
+			"object",
+			"Kernel",
+			"public",
+			"class",
+			"classes",
+			"\n	",
+			"name",
+			"Container",
+			"container",
+			"Container",
+			"Core",
+			"Nacho",
+			"filename",
+			"__FILE__",
+			"vdalue",
 			"200",
 			"2400",
 			"2900",
@@ -666,71 +779,7 @@
 			"mainWindow",
 			"hwnd",
 			"eax",
-			"i",
-			"row",
-			"mi",
-			"fcomi",
-			"int",
-			"gcdr",
-			"esp",
-			"esi",
-			"eax",
-			"edi",
-			"eax",
-			"m_ptr",
-			"ostream",
-			"n",
-			"map",
-			"char",
-			"ostream",
-			"& ",
-			"ostream",
-			"_array_conjuction",
-			"sum",
-			"sudm",
-			"класса",
-			"n",
-			"m_end",
-			"ebx",
-			"push",
-			"m_ptr",
-			"ptr",
-			"end",
-			".",
-			"errors",
-			"rc",
-			"Integer",
-			"Double",
-			"Integer",
-			"int",
-			"nInteger",
-			"Integer",
-			"process",
-			"SQLITE_DONE",
-			"process",
-			"std::string",
-			"step",
-			"bolol",
-			"result",
-			"column",
-			"iterator",
-			"Word",
-			"iterator",
-			"Word",
-			"iterator",
-			"Word",
-			"(const char*)word",
-			"begin",
-			"words",
-			"text",
-			");",
-			"result",
-			"text",
-			"1, word",
-			"initSQLMap",
-			"c_str",
-			"stmt",
-			"sql.c_str()"
+			"i"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -812,12 +861,168 @@
 		"selected_items":
 		[
 			[
-				"bocp",
-				"prog\\projects\\c++\\jrush\\src\\controllers\\bot.cpp"
+				"homc",
+				"src\\controller\\HomeController.php"
+			],
+			[
+				"respo",
+				"src\\core\\Response.php"
+			],
+			[
+				"conaw",
+				"src\\core\\ContainerAware.php"
+			],
+			[
+				"con",
+				"src\\core\\Container.php"
+			],
+			[
+				"vi",
+				"src\\core\\View.php"
+			],
+			[
+				"route",
+				"src\\core\\Router.php"
+			],
+			[
+				"hom",
+				"resources\\views\\home.phtml"
+			],
+			[
+				"conof",
+				"config\\config.yml"
 			],
 			[
 				"conf",
-				"prog\\projects\\c++\\jrush\\src\\config\\config.cpp"
+				"config\\config.yml"
+			],
+			[
+				"confi",
+				"config\\config.yml"
+			],
+			[
+				"json",
+				"composer.json"
+			],
+			[
+				"requ",
+				"src\\core\\Request.php"
+			],
+			[
+				"rout",
+				"config\\routing.yml"
+			],
+			[
+				"rou",
+				"src\\core\\Router.php"
+			],
+			[
+				"comj",
+				"composer.json"
+			],
+			[
+				"com",
+				"composer.json"
+			],
+			[
+				"psr",
+				"vendor\\composer\\autoload_psr4.php"
+			],
+			[
+				"resp",
+				"src\\core\\Response.php"
+			],
+			[
+				"ap",
+				"web\\app.php"
+			],
+			[
+				"kerne",
+				"src\\core\\Kernel.php"
+			],
+			[
+				"ker",
+				"src\\core\\Kernel.php"
+			],
+			[
+				"conta",
+				"src\\core\\Container.php"
+			],
+			[
+				"compo",
+				"composer.json"
+			],
+			[
+				"re",
+				"src\\core\\Request.php"
+			],
+			[
+				"co",
+				"src\\core\\Container.php"
+			],
+			[
+				"paba",
+				"src\\core\\ParameterBag.php"
+			],
+			[
+				"app",
+				"web\\app.php"
+			],
+			[
+				"res",
+				"src\\core\\Response.php"
+			],
+			[
+				"kern",
+				"src\\core\\Kernel.php"
+			],
+			[
+				"parba",
+				"src\\core\\ParameterBag.php"
+			],
+			[
+				"ro",
+				"src\\core\\Router.php"
+			],
+			[
+				"paa",
+				"src\\core\\ParameterBag.php"
+			],
+			[
+				"",
+				"src\\core\\ParameterBag.php"
+			],
+			[
+				"pab",
+				"src\\core\\ParameterBag.php"
+			],
+			[
+				"log",
+				"src\\core\\Logger.php"
+			],
+			[
+				"sec",
+				"src\\core\\Security.php"
+			],
+			[
+				"rote",
+				"src\\core\\Router.php"
+			],
+			[
+				"req",
+				"src\\core\\Request.php"
+			],
+			[
+				"cont",
+				"src\\core\\Container.php"
+			],
+			[
+				"routph",
+				"src\\core\\Router.php"
+			],
+			[
+				"bocp",
+				"prog\\projects\\c++\\jrush\\src\\controllers\\bot.cpp"
 			],
 			[
 				"townh",
@@ -924,10 +1129,6 @@
 				"git\\rj\\src\\core\\thewayithink.h"
 			],
 			[
-				"con",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\container.h"
-			],
-			[
 				"contatp",
 				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\container.tpp"
 			],
@@ -967,7 +1168,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 253.0,
 	"status_bar_visible": true,
 	"template_settings":

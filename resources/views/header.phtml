@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title><?php if ($this->title) echo $this->title; else echo $this->translate("menu." . $this->section); ?></title>
+	<link href="<?php $this->echoAsset("css/bootstrap.min.css"); ?>" rel="stylesheet">
+	<link href="<?php $this->echoAsset("css/carousel.css"); ?>" rel="stylesheet">
+	<link href="<?php $this->echoAsset("css/bootstrap-image-gallery.min.css"); ?>" rel="stylesheet">
+	<link href="<?php $this->echoAsset("css/jquery.fileupload.css"); ?>" rel="stylesheet">
+	<link href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="navbar-wrapper">
+		<div class="container">
+
+			<nav class="navbar navbar-inverse navbar-static-top">
+			 <div class="container">
+				 <div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only"><?php echo $this->translate("misc.toggle_navigation"); ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="<?php $this->echoLink("home"); ?>"><?php echo $this->translate("company"); ?></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li <?php if ($this->section == "home") echo "class=\"active\""; ?>>
+							<a href="<?php $this->echoLink("home"); ?>"><?php echo $this->translate("menu.home"); ?>
+							</a>
+						</li>
+						<li <?php if ($this->section == "news") echo "class=\"active\""; ?>>
+							<a href="<?php $this->echoLink("news"); ?>"><?php echo $this->translate("menu.news"); ?>
+							</a>
+						</li>
+						<li <?php if ($this->section == "gallery") echo "class=\"active\""; ?>>
+							<a href="<?php $this->echoLink("gallery_show"); ?>"><?php echo $this->translate("menu.gallery"); ?>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+	</div>
+</div>

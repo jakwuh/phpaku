@@ -1,4 +1,4 @@
-{
+    {
     "name": "james/test",
     "authors": [
         {
@@ -8,5 +8,14 @@
     ],
     "require": {
         "symfony/yaml": "~2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aku\\Core\\Controller\\": "src/core/controller",
+            "Aku\\Core\\Model\\": "src/core/model",
+            "Aku\\Core\\Model\\Form\\" : "src/core/model/form",
+            "App\\Controller\\" : "src/app/controller",
+            "App\\Model\\" : "src/app/model"
+        }
     }
 }

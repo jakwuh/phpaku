@@ -1,0 +1,82 @@
+<?php $this->include_view("header", array("section" => "gallery")) ?>
+
+ <div class="container theme-showcase" role="main">
+
+    <div class="jumbotron" style="margin-top: 80px;">
+        <div id="links">
+            <?php foreach ($this->images as $image) { ?>
+                <a href="<?php $this->echoImage($image); ?>" data-gallery>
+                    <img width="50" height="50" src="<?php $this->echoThumbnail($image); ?>">
+                </a>
+            <?php } ?>
+            <span class="btn btn-success fileinput-button">
+                <span><?php echo $this->translate("gallery.add") ?></span>
+                <input id="fileupload" type="file" name="files[]" data-url="<?php $this->echoLink("gallery_server"); ?>" multiple="">
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <?php echo $this->translate("misc.modal_prev") ?>
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        <?php echo $this->translate("misc.modal_next") ?>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+    $scripts = "";
+    $scripts .= "<script src=\"//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js\"></script>";
+    $scripts .= "<script src=\"" . $this->asset("js/bootstrap-image-gallery.min.js") . "\"></script>";
+    $scripts .= "<script src=\"" . $this->asset("js/jquery.ui.widget.js") . "\"></script>";
+    $scripts .= "<script src=\"" . $this->asset("js/jquery.iframe-transport.js") . "\"></script>";
+    $scripts .= "<script src=\"" . $this->asset("js/jquery.fileupload.js") . "\"></script>";
+    $scripts .= 
+<<<HEREDOC
+<script>
+    $(function () {
+        $('#fileupload').fileupload({
+            dataType: 'json',
+            done: function (e, data) {
+                $.each(data.result.files, function (index, file) {
+                    $("#links").prepend(
+                        "<a href=\"" + file.url + "\" data-gallery>" +
+                            "<img width=\"50\" height=\"50\" src=\"" + file.url+ "\">" + 
+                        "</a>"
+                        );
+                    $.ajax({
+                        url: "{$this->link("gallery_post")}",
+                        method: "POST",
+                        data: { form: {name : file.name }}
+                    });
+                });
+            }
+        });
+    });
+</script>
+HEREDOC;
+    $this->include_view("footer", array("scripts" => $scripts)); 
+?>
+

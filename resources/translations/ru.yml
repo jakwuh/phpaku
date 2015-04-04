@@ -1,0 +1,62 @@
+company: Company
+
+error: Ошибка
+error_home: На главную
+errors:
+    default: Во время работы сайта произошла ошибка
+    not_found: Запрашиваемая страница не найдена
+    wrong_route: Страницы не существует
+
+menu:
+    home: Главная
+    news: Новости
+    gallery: Галерея
+
+misc:
+    modal_prev: Назад
+    modal_next: Вперед
+    details: Подробнее
+    back_to_top: Наверх
+    toggle_navigation: Переключить управление
+
+slider:
+    button:
+        first:
+        second:
+        third:
+    caption:
+        first: 
+        second:
+        third:
+    content:
+        first:
+        second:
+        third:
+
+promo:
+    caption:
+        first: 
+        second:
+        third:
+    content:
+        first:
+        second:
+        third:
+
+news:
+    goto: Новости
+    empty:
+        caption: Эх...
+        text: К сожалению новостей на данный момент нет
+
+article:
+    edit: Редактирование
+    form:
+        edit: Редактировать
+        title: Название
+        promo_text: Промо-текст
+        text: Текст
+        save: Сохранить
+
+gallery:
+    add: Добавить

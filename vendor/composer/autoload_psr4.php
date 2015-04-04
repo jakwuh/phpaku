@@ -6,4 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Model\\' => array($baseDir . '/src/app/model'),
+    'App\\Controller\\' => array($baseDir . '/src/app/controller'),
+    'Aku\\Core\\Model\\Form\\' => array($baseDir . '/src/core/model/form'),
+    'Aku\\Core\\Model\\' => array($baseDir . '/src/core/model'),
+    'Aku\\Core\\Controller\\' => array($baseDir . '/src/core/controller'),
 );

@@ -1,0 +1,8 @@
+<div class="col-md-4">
+	<?php $article = $this->article; ?>
+	<h2><?php echo $article->get("title"); ?></h2>
+	<p><?php echo $article->get("promo_text"); ?></p>
+	<p><a class="btn btn-default" href="<?php $this->echoLink("article_show", array("id" => $article->get("id"))); ?>" role="button">
+		<?php echo $this->translate("misc.details") ?>&raquo;
+	</a></p>
+</div>

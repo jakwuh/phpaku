@@ -1,0 +1,28 @@
+<?php $this->include_view("header", array("section" => "news")); ?>
+
+<div class="jumbotron" style="padding-top: 80px;">
+	<div class="container">
+		<?php if ($this->articles->count() == 0) { ?>
+			<h1><?php echo $this->translate("news.empty.caption"); ?></h1>
+			<p><?php echo $this->translate("news.empty.text"); ?></p>
+		<?php } else { ?>
+		<?php $article = $this->articles->get(0); ?>
+			<h1><?php echo $article->get("title"); ?></h1>
+			<p><?php echo $article->get("promo_text"); ?></p>
+			<p><a class="btn btn-primary btn-lg" href="<?php $this->echoLink("article_show", array("id" => $article->get("id"))); ?>" role="button"><?php echo $this->translate("misc.details") ?> &raquo;</a></p>
+		<?php } ?>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<?php
+			foreach ($this->articles->models as $id => $article) {
+				if ($id > 0) $this->include_view("article_promo", array("article" => $article));
+			}
+		?>
+		</div>
+		<hr>
+</div>
+
+<?php $this->include_view("footer"); ?>

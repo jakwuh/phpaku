@@ -1,0 +1,50 @@
+home:
+    path: /
+    controller: Home
+    action: index
+
+news:
+    path: /news
+    controller: News
+    action: all
+
+article_show:
+    path: /news/(?'id'\d+)
+    generator: /news/{id}
+    controller: News
+    action: show
+    method: [get]
+
+article_update:
+    path: /news/(?'id'\d+)
+    generator: /news/{id}
+    controller: News
+    action: update
+    method: [post]
+
+article_edit:
+    path: /news/(?'id'\d+)/edit
+    generator: /news/{id}/edit
+    controller: News
+    action: edit
+
+gallery_show:
+    path: /gallery
+    controller: Gallery
+    action: all
+    method: [get]
+
+gallery_post:
+    path: /gallery
+    controller: Gallery
+    action: post
+    method: [post, put]
+
+gallery_server:
+    path: /server/index.php
+
+login:
+    path: /login
+    controller: Home
+    action: login
+    method: [post]

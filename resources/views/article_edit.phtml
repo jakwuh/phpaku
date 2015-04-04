@@ -1,0 +1,35 @@
+<?php $this->include_view("header", array("title" => $this->translate("article.edit"))); ?>
+
+   <div class="container theme-showcase" role="main">
+      <div class="jumbotron" style="margin-top: 80px;">
+       
+		<form action="<?php $this->echoLink("article_update", array("id" => $this->form->get("id"))) ?>" class="form-horizontal" method="POST">
+		<?php 
+			$form = $this->form;
+			$this->include_view("text_field", array(
+				"name" => "form[title]", 
+				"value" => $form->get("title"), 
+				"placeholder" => $this->translate("article.form.title"),
+				));
+			$this->include_view("text_field", array(
+				"name" => "form[promo_text]", 
+				"value" => $form->get("promo_text"), 
+				"placeholder" => $this->translate("article.form.promo_text"),
+				));
+			$this->include_view("textarea_field", array(
+				"name" => "form[text]", 
+				"value" => $form->get("text"), 
+				"placeholder" => $this->translate("article.form.text"),
+				));
+		?>
+		  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button type="submit" class="btn btn-default"><?php echo $this->translate("article.form.save"); ?></button>
+		    </div>
+		  </div>
+		</form>
+
+      </div>
+    </div>
+
+<?php $this->include_view("footer"); ?>
