@@ -15,8 +15,7 @@ class GalleryController extends Controller
 	public function allAction()
 	{
 		$images = new ImageCollection();
-		$connection = $this->container->get("connection");
-		$loaded = $images->load($connection);
+		$loaded = $images->load($this->get("connection"));
 		if (!$loaded) throw new DatabaseException("cannot fetch images");
 		$view = new View($this->container, "gallery");
 		$view->set("images", $images->models);
@@ -26,12 +25,11 @@ class GalleryController extends Controller
 	public function postAction()
 	{
 		$image = new Image();
-		$connection = $this->container->get("connection");
-		$params = $this->container->get("request")->get("post");
-		if (!is_array($params) || !array_key_exists($name, $params))
+		$params = $this->get("request")->get("post");
+		if (!is_array($params) || !array_key_exists("name", $params))
 			throw new RequestException("wrong file upload request");
 		$image->set("path", $params["name"]);
-		$image->save($connection);
+		$image->save($this->get("connection"));
 		return $this->allAction();
 	}
 

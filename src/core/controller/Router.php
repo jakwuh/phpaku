@@ -34,22 +34,24 @@ class Router extends ContainerAware
 
 	public function match(Request $request)
 	{
-		$this->routes = Yaml::parse(file_get_contents(PATH_CONFIG . "/routing.yml"));
-		
+		$path = PATH_CONFIG . "/routing.yml";
+		$content = file_get_contents($path);
+		if ($content === false)
+			throw new ApplicationException("try to open unexisting file: " . $path);
+		$this->routes = Yaml::parse($content);
 		$response = new Response();
 
-		$found = false;
 		foreach ($this->routes as $name => $args) {
-			if (($parameters = self::test($args["path"], $request->get("path"))) 
-				&& (!array_key_exists("method", $args) || in_array($request->get("method"), $args["method"]))) 
-			{
-				$response->setCallback($args["controller"], $args["action"]);
-				$request->set("parameters", $parameters);
-				$found = true;
-				break;
+			$parameters = self::test($args["path"], $request->get("path"));
+			if ($parameters) {
+				if (!array_key_exists("method", $args) || in_array($request->get("method"), $args["method"])) {
+					$response->setCallback($args["controller"], $args["action"]);
+					$request->set("parameters", $parameters);
+					return $response;
+				}
 			}
 		}
-		if (!$found) throw new WrongRouteException("route not found: " . $request->get("path"));
-		return $response;
+
+		throw new WrongRouteException("route not found: " . $request->get("path"));
 	}
 }

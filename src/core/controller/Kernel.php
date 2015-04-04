@@ -14,6 +14,7 @@ use Aku\Core\Model\View;
 use Aku\Core\Model\Exception\Exception;
 use Aku\Core\Model\Exception\NotFoundException;
 use Aku\Core\Model\Exception\WrongRouteException;
+use Aku\Core\Model\Exception\ApplicationException;
 use Symfony\Component\Yaml\Yaml;
 
 class Kernel extends ContainerAware

@@ -66,6 +66,7 @@ news:
 
 article:
     edit: Редактирование
+    post: Создание
     form:
         edit: Редактировать
         title: Название

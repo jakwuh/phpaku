@@ -16,10 +16,8 @@ class NewsController extends Controller
 	public function allAction()
 	{
 		$articles = new ArticleCollection();
-		$connection = $this->container->get("connection");
-		$loaded = $articles->load($connection);
-		if (!$loaded)
-			throw new ApplicationException();
+		$loaded = $articles->load($this->get("connection"));
+		if (!$loaded) throw new ApplicationException();
 		$view = new View($this->container, "news");
 		$view->set("articles", $articles);
 		return $view;
@@ -27,7 +25,7 @@ class NewsController extends Controller
 
 	public function showAction()
 	{
-		$article = $this->load();
+		$article = $this->loadArticle();
 		$view = new View($this->container, "article");
 		$view->set("article", $article);
 		return $view;
@@ -35,65 +33,45 @@ class NewsController extends Controller
 
 	public function editAction()
 	{
-		$article = $this->load();
-		$form = new ArticleForm();
-		$form->bindFromModel($article);
-		$view = new View($this->container, "article_edit");
-		$view->set("form", $form);
-		return $view;
+		return $this->renderForm($this->loadArticle());
 	}
 
 	public function addAction()
 	{
-		$form = new ArticleForm();
-		$view = new View($this->container, "article_edit");
-		$view->set("form", $form);
-		return $view;
+		return $this->renderForm();
 	}
 
 	public function postAction()
 	{
 		$form = new ArticleForm();
 		$form->bindRequest($this->get("request"));
-		if (count($form->errors) != 0) {
-			$view = new View($this->container, "article_edit");
-			$view->set("form", $form);
-			return $view;
-		} else {
-			$article = new Article();
-			$form->bindToModel($article);
-			$connection = $this->container->get("connection");
-			$article->save($connection);
-			return $this->allAction();
-		}
+		if (count($form->errors) != 0)
+			return $this->renderForm(null, $form);
+		
+		$article = new Article();
+		$form->bindToModel($article);
+		$saved = $article->save($this->get("connection"));
+		if (!$saved) throw new ApplicationException("cannot save article");
+		return $this->allAction();
 	}
 
 	public function updateAction()
 	{
-		$article = $this->load();
-		$id = $article->get("id");
+		$article = $this->loadArticle();
 		$form = new ArticleForm();
 		$form->bindRequest($this->get("request"));
-		$form->bind("id", $id);
-		if (count($form->errors) != 0) {
-			$view = new View($this->container, "article_edit");
-			$view->set("form", $form);
-			return $view;
-		} else {
-			$form->bindToModel($article);
-			$article->set("id", $id);
-			$connection = $this->container->get("connection");
-			$updated = $article->update($connection);
-			if (!$updated)
-				throw new ApplicationException();
-			$article = $this->load();
-			$view = new View($this->container, "article");
-			$view->set("article", $article);
-			return $view;
-		}
+		$form->bind("id", $article->get("id"));
+		if (count($form->errors) != 0)
+			return $this->renderForm(null, $form);
+
+		$form->bindToModel($article);
+		$updated = $article->update($this->get("connection"));
+		if (!$updated) throw new ApplicationException("cannot update article");
+
+		return $this->renderForm($this->loadArticle());
 	}
 
-	public function load($id = null)
+	public function loadArticle($id = null)
 	{
 		$request = $this->get("request");
 		$id = $id ? $id : (int) $request->get("parameters")["id"];
@@ -103,5 +81,19 @@ class NewsController extends Controller
 		if (!$loaded)
 			throw new NotFoundException();
 		return $article;
+	}
+
+	public function renderForm(Article $article =  null, ArticleForm $form = null)
+	{
+		if (!$form) $form = new ArticleForm();
+		if ($article) {
+			$form->bind("id", $article->get("id"));
+			$form->bindFromModel($article);
+		} else {
+			$form->bind("id", 0);
+		}
+		$view = new View($this->container, "article_edit");
+		$view->set("form", $form);
+		return $view;
 	}
 }

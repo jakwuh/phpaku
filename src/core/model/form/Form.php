@@ -9,21 +9,25 @@ use Aku\Core\Model\Exception\ApplicationException;
 
 abstract class Form
 {
-	protected $fields;
 	public $errors;
+	protected $fields;
+	private $args;
 
 	function __construct()
 	{
 		$this->fields = array();
 		$this->errors = array();
+		$this->args = array();
 	}
 
 	public function get($key)
 	{
 		if (array_key_exists($key, $this->fields))
 			return $this->fields[$key]->get();
-		else 
-			throw new ApplicationException();
+		else if (array_key_exists($key, $this->args))
+			return $this->args[$key];
+		else
+			throw new ApplicationException("try to access unexisting property:" . $key);
 	}
 
 	public function out($key)
@@ -38,8 +42,12 @@ abstract class Form
 
 	public function bind($key, $value)
 	{
-		$error = $this->fields[$key]->set($value);
-		if ($error) $this->errors[] = $error;
+		if (array_key_exists($key, $this->fields)) {
+			$error = $this->fields[$key]->set($value);
+			if ($error) $this->errors[] = $error;
+		} else {
+			$this->args[$key] = $value;
+		}
 	}
 
 	public function bindToModel(Model $model)

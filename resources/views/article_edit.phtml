@@ -1,4 +1,7 @@
-<?php $this->include_view("header", array("title" => $this->translate("article.edit"))); ?>
+<?php 
+	$article = ($this->form->get("id") > 0 ? "article.edit" : "article.post");
+	$this->include_view("header", array("title" => $this->translate($article)));
+?>
 
    <div class="container theme-showcase" role="main">
       <div class="jumbotron" style="margin-top: 80px;">

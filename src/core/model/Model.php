@@ -16,7 +16,7 @@ abstract class Model
 		foreach ($fields as $key => $value) {
 			$this->fields[$key]->set($value);
 		}
-		$this->extra = "";
+		$this->extra_statement = "";
 	}
 
 	public function set($key, $value)

@@ -12,7 +12,7 @@ class Article extends Model
 {
 	function __construct(array $fields = array())
 	{
-		$this->fields = $this->build();
+		$this->fields = self::build();
 		parent::__construct($fields);
 	}
 

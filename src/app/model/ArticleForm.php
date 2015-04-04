@@ -12,7 +12,6 @@ class ArticleForm extends Form
 	function __construct()
 	{
 		parent::__construct();
-		$this->fields["id"] = new IntField("id");
 		$this->fields["title"] = new TextField("title");
 		$this->fields["promo_text"] = new TextField("promo_text");
 		$this->fields["text"] = new TextField("text");

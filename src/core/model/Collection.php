@@ -7,8 +7,8 @@ use Aku\Core\Controller\Connection;
 
 abstract class Collection
 {
-	protected $condition;
 	public $models;
+	protected $condition;
 	protected $extra_statement;
 
 	function __construct()
