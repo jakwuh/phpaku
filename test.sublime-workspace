@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"va",
+				"values"
+			],
+			[
+				"arrake",
+				"array_keys"
+			],
+			[
+				"Cona",
+				"ContainerAware"
+			],
+			[
+				"ech",
+				"echoAsset"
+			],
+			[
+				"isnu",
+				"is_numeric"
+			],
+			[
+				"er",
+				"error"
+			],
+			[
+				"geneteapa",
+				"generateTranslationPath"
+			],
+			[
+				"con",
+				"connection"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"add",
+				"addcslashes"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"clas",
+				"classname"
+			],
+			[
 				"fun",
 				"fun	function …"
 			],
@@ -30,14 +78,6 @@
 			[
 				"Con",
 				"Container"
-			],
-			[
-				"va",
-				"var_dump"
-			],
-			[
-				"clas",
-				"classes"
 			],
 			[
 				"conta",
@@ -295,6 +335,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/James/Desktop/Новый текстовый документ (2).txt",
+			"settings":
+			{
+				"buffer_size": 32,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -303,10 +351,42 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 41.0,
-		"last_filter": "php",
+		"height": 337.0,
+		"last_filter": "htm",
 		"selected_items":
 		[
+			[
+				"htm",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"convta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"indeta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"conta",
+				"Package Control: Add Channel"
+			],
+			[
+				"inde",
+				"Indentation: Convert to Tabs"
+			],
 			[
 				"php",
 				"Set Syntax: PHP"
@@ -472,7 +552,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 480.0
+		"width": 408.0
 	},
 	"console":
 	{
@@ -495,16 +575,91 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/test",
-		"/C/xampp/htdocs/test/resources",
-		"/C/xampp/htdocs/test/resources/views",
 		"/C/xampp/htdocs/test/src",
-		"/C/xampp/htdocs/test/src/core",
-		"/C/xampp/htdocs/test/src/core/Controller",
-		"/C/xampp/htdocs/test/src/core/model",
-		"/C/xampp/htdocs/test/web"
+		"/C/xampp/htdocs/test/src/core/controller"
 	],
 	"file_history":
 	[
+		"/C/Users/James/Desktop/Новый текстовый документ.txt",
+		"/C/xampp/htdocs/test/src/core/controller/Kernel.php",
+		"/C/xampp/htdocs/test/src/core/controller/Controller.php",
+		"/C/xampp/htdocs/test/resources/translations/ru.yml",
+		"/C/xampp/htdocs/test/config/config.yml",
+		"/C/xampp/htdocs/test/resources/views/home.phtml",
+		"/C/xampp/htdocs/test/config/routing.yml",
+		"/C/xampp/htdocs/test/src/app/controller/NewsController.php",
+		"/C/xampp/htdocs/test/resources/views/news.phtml",
+		"/C/xampp/htdocs/test/src/core/controller/Connection.php",
+		"/C/xampp/htdocs/test/resources/views/article_edit.phtml",
+		"/C/xampp/htdocs/test/src/core/model/form/Form.php",
+		"/C/xampp/htdocs/test/src/app/model/ArticleForm.php",
+		"/C/xampp/htdocs/test/src/core/model/Model.php",
+		"/C/xampp/htdocs/test/src/app/model/Article.php",
+		"/C/xampp/htdocs/test/src/core/model/form/StrictTextField.php",
+		"/C/xampp/htdocs/test/src/core/model/form/TextField.php",
+		"/C/xampp/htdocs/test/src/core/model/Request.php",
+		"/C/xampp/htdocs/test/src/core/Form.php",
+		"/C/xampp/htdocs/test/src/core/model/Collection.php",
+		"/C/xampp/htdocs/test/src/app/model/ArticleCollection.php",
+		"/C/xampp/htdocs/xampp/head.php",
+		"/C/xampp/htdocs/test/src/core/model/form/Field.php",
+		"/C/xampp/htdocs/test/resources/views/text_field.phtml",
+		"/C/xampp/htdocs/test/src/core/model/View.php",
+		"/C/xampp/htdocs/test/src/core/model/form/IntField.php",
+		"/C/xampp/htdocs/test/src/core/model/form/DateField.php",
+		"/C/xampp/htdocs/test/src/app/model/Image.php",
+		"/C/xampp/htdocs/test/resources/views/gallery.phtml",
+		"/C/xampp/htdocs/test/src/core/controller/Logger.php",
+		"/C/xampp/htdocs/test/src/core/model/exception/ApplicationException.php",
+		"/C/xampp/htdocs/test/.gitignore",
+		"/C/xampp/htdocs/test/src/core/model/Form/IntField.php",
+		"/C/xampp/htdocs/test/src/app/controller/GalleryController.php",
+		"/C/xampp/htdocs/test/src/core/model/Form/DateField.php",
+		"/C/xampp/htdocs/test/src/core/model/Form/Field.php",
+		"/C/xampp/htdocs/test/src/core/model/Form/StrictTextField.php",
+		"/C/xampp/htdocs/test/web/server/UploadHandler.php",
+		"/C/Users/James/AppData/Local/Temp/_tc/tr/taskroom.ru/web/php_loader/UploadHandler.php",
+		"/C/xampp/htdocs/test/task.do",
+		"/C/Users/James/Downloads/jQuery-File-Upload-9.9.3/jQuery-File-Upload-9.9.3/server/php/files/.htaccess",
+		"/C/Users/James/Downloads/jQuery-File-Upload-9.9.3/jQuery-File-Upload-9.9.3/server/php/index.php",
+		"/C/xampp/htdocs/test/src/core/model/exception/Exception.php",
+		"/C/xampp/htdocs/test/src/core/controller/Router.php",
+		"/C/xampp/htdocs/test/resources/views/error.phtml",
+		"/C/xampp/htdocs/test/resources/views/header.phtml",
+		"/C/xampp/htdocs/test/resources/views/footer.phtml",
+		"/C/xampp/htdocs/test/src/core/model/exception/Exception — копия (3).php",
+		"/C/xampp/htdocs/test/src/core/model/exception/WrongRouteException.php",
+		"/C/xampp/htdocs/test/src/core/model/Exception.php",
+		"/C/xampp/htdocs/test/src/app/controller/HomeController.php",
+		"/C/xampp/htdocs/test/web/app.php",
+		"/C/xampp/htdocs/test/src/core/model/Form/Form.php",
+		"/C/xampp/htdocs/test/src/core/controller/Guard.php",
+		"/C/Users/James/Downloads/jQuery-File-Upload-9.9.3/jQuery-File-Upload-9.9.3/server/php/UploadHandler.php",
+		"/C/xampp/htdocs/test/resources/views/article.phtml",
+		"/C/xampp/htdocs/test/web/includes/css/jquery.fileupload.css",
+		"/C/xampp/htdocs/test/resources/views/textarea_field.phtml",
+		"/C/xampp/htdocs/test/web/includes/js/jquery.iframe.js",
+		"/C/xampp/htdocs/test/src/app/model/ImageCollection.php",
+		"/D/work/prog/projects/c++/jrush/src/core/application.cpp",
+		"/D/work/prog/projects/c++/jrush/src/config/levels.h",
+		"/D/work/prog/projects/c++/jrush/src/config/levels.cpp",
+		"/C/xampp/htdocs/test/src/core/model/Form/TextField.php",
+		"/C/xampp/htdocs/test/resources/views/article_promo.phtml",
+		"/C/xampp/htdocs/test/tmp/news.html",
+		"/C/xampp/htdocs/test/web/includes/js/bootstrap-image-gallery.min.js",
+		"/C/xampp/htdocs/test/web/includes/css/bootstrap-image-gallery.min.css",
+		"/C/xampp/htdocs/test/web/news.phtml",
+		"/C/xampp/htdocs/test/src/core/model/Container.php",
+		"/C/xampp/htdocs/test/vendor/symfony/yaml/Symfony/Component/Yaml/Exception/RuntimeException.php",
+		"/C/xampp/htdocs/test/web/includes/js/holder.js",
+		"/C/xampp/htdocs/test/src/core/model/Response.php",
+		"/C/xampp/htdocs/test/src/core/model/ContainerAware.php",
+		"/D/work/prog/projects/web/tr/code/src/Tkrm/BaseBundle/Services/EventService.php",
+		"/C/xampp/htdocs/test/web/login.phtml",
+		"/C/xampp/htdocs/test/web/includes/css/cover.css",
+		"/C/xampp/php/php.ini",
+		"/C/xampp/htdocs/test/composer.json",
+		"/C/xampp/htdocs/test/src/core/model/Form/Form — копия.php",
 		"/C/xampp/htdocs/test/src/core/Kernel.php",
 		"/C/xampp/htdocs/test/src/core/View.php",
 		"/C/xampp/htdocs/test/src/controller/HomeController.php",
@@ -513,23 +668,15 @@
 		"/C/xampp/htdocs/test/src/core/ContainerAware.php",
 		"/C/xampp/htdocs/test/src/core/Router.php",
 		"/C/xampp/htdocs/test/src/core/Controller.php",
-		"/C/xampp/htdocs/test/resources/views/home.phtml",
 		"/C/xampp/htdocs/test/web/includes/css/carousel.css",
-		"/C/xampp/htdocs/test/config/config.yml",
-		"/C/xampp/htdocs/test/composer.json",
 		"/C/xampp/htdocs/test/src/core/Request.php",
-		"/C/xampp/htdocs/test/config/routing.yml",
 		"/C/xampp/htdocs/test/vendor/composer/autoload_psr4.php",
-		"/C/xampp/htdocs/test/src/core/Form.php",
-		"/C/xampp/htdocs/test/web/app.php",
-		"/D/work/prog/projects/web/tr/code/src/Tkrm/BaseBundle/Services/EventService.php",
 		"/C/xampp/htdocs/test/src/core/ParameterBag.php",
 		"/D/work/prog/projects/web/tr/code/src/Tkrm/TaskBundle/Resources/config/routing/task.yml",
 		"/D/work/prog/projects/web/tr/code/app/config/routing.yml",
 		"/D/work/prog/projects/web/tr/code/app/config/parameters.yml",
 		"/C/xampp/htdocs/test/tmp/index.html",
 		"/C/xampp/htdocs/test/tmp/gallery.html",
-		"/C/xampp/htdocs/test/tmp/news.html",
 		"/C/xampp/htdocs/test/src/core/Guard.php",
 		"/C/xampp/htdocs/test/src/core/Logger.php",
 		"/C/xampp/htdocs/test/src/core/Security.php",
@@ -547,7 +694,6 @@
 		"/C/xampp/htdocs/test/vendor/autoload.php",
 		"/C/xampp/htdocs/test/vendor/composer/autoload_real.php",
 		"/C/xampp/htdocs/test/src/resources/views/home.phtml",
-		"/D/work/prog/projects/c++/jrush/src/config/levels.cpp",
 		"/D/work/prog/projects/c++/jrush/src/config/config.cpp",
 		"/D/work/prog/projects/c++/jrush/src/core/town.cpp",
 		"/D/work/prog/projects/c++/jrush/src/core/town.h",
@@ -557,82 +703,11 @@
 		"/D/work/prog/projects/c++/game/src/core/view.cpp",
 		"/D/media/soft/install/MISC/KMSAuto Net 2014 v1.2.4 Portable RU Активатор office VL/KMSAuto Net 2014 v1.2.4 Portable RU/readme_ru.txt",
 		"/D/work/prog/projects/c++/game/src/controllers/bot.h",
-		"/D/work/prog/projects/c++/jrush/src/core/application.cpp",
 		"/D/work/prog/projects/c++/jrush/src/core/application.h",
 		"/D/work/prog/acm/acmp/main.cpp",
 		"/D/work/prog/terms/2/theory/C++/Ассемблер_подпрограммы/ПримерWIN32/MSGBOX.ASM",
 		"/D/work/prog/projects/c++/jrush/src/core/tmp.cpp",
-		"/D/work/prog/projects/c++/jrush/src/controllers/player.h",
-		"/D/work/prog/projects/c++/jrush/src/utils/math.h",
-		"/D/work/prog/projects/c++/jrush/src/config/levels.h",
-		"/D/work/prog/projects/c++/jrush/src/main.cpp",
-		"/D/work/prog/projects/c++/jrush/src/graphics/circle.h",
-		"/D/work/prog/projects/c++/jrush/src/graphics/circle.cpp",
-		"/D/work/prog/projects/c++/jrush/src/graphics/cursor.h",
-		"/D/work/prog/projects/c++/jrush/src/graphics/cursor.cpp",
-		"/D/work/prog/projects/c++/jrush/src/graphics/view.h",
-		"/D/work/prog/projects/c++/jrush/src/config/settings.h",
-		"/D/work/prog/projects/c++/jrush/src/graphics/menu.cpp",
-		"/D/work/prog/projects/c++/jrush/src/core/interfaces.h",
-		"/D/work/prog/terms/2/lections/Examples/Class Example #10 - Derived class.cpp",
-		"/D/work/prog/terms/2/lections/Templates.cpp",
-		"/D/work/prog/acm/acmp/input.txt",
-		"/D/work/english/terms/2/IPS",
-		"/D/work/prog/projects/c++/jrush/src/graphics/menu.h",
-		"/D/work/prog/projects/c++/jrush/src/config/errors.h",
-		"/D/work/prog/projects/c++/jrush/src/utils/menu.h",
-		"/D/work/prog/projects/c++/jrush/src/utils/menu.cpp",
-		"/D/work/prog/projects/c++/jrush/src/graphics/region.h",
-		"/D/work/prog/projects/c++/jrush/src/interfaces/idrawable.h",
-		"/D/work/prog/terms/2/assembly/strings/strings/functions.asm",
-		"/D/work/prog/projects/c++/jrush/src/utils/styles.h",
-		"/D/work/prog/projects/c++/jrush/src/graphics/bitmap.cpp",
-		"/D/work/prog/projects/c++/jrush/src/core/generator.h",
-		"/D/work/prog/projects/c++/jrush/src/graphics/region.cpp",
-		"/D/work/prog/projects/c++/jrush/src/controllers/player.cpp",
-		"/D/work/prog/projects/c++/game/src/core/view.h",
-		"/D/work/prog/projects/c++/jrush/src/tmp.cpp",
-		"/D/work/prog/terms/2/labs/2-4/cpp/1 fraction/Fraction/fraction.h",
-		"/D/work/prog/projects/c++/jrush/src/graphics/pixel_region.h",
-		"/D/work/prog/projects/c++/jrush/src/core/map.h",
-		"/D/work/prog/projects/c++/jrush/src/core/map.cpp",
-		"/D/work/prog/projects/c++/jrush/src/core/view.h",
-		"/D/work/prog/projects/c++/game/src/core/application.cpp",
-		"/D/work/prog/terms/2/lections/Examples/WinApi Example #2.cpp",
-		"/D/work/prog/terms/2/lections/Examples/WinApi Example #1.cpp",
-		"/D/work/prog/projects/c++/jrush/src/utils/colors.h",
-		"/D/work/prog/projects/c++/game/src/config/surface.h",
-		"/D/work/prog/projects/c++/jrush/src/bot.cpp",
-		"/D/work/prog/projects/c++/jrush/src/player.cpp",
-		"/D/work/prog/projects/c++/jrush/src/map.cpp",
-		"/D/work/prog/projects/c++/jrush/src/town.cpp",
-		"/D/work/prog/projects/c++/jrush/src/bot.h",
-		"/D/work/prog/projects/c++/jrush/src/player.h",
-		"/D/work/prog/projects/c++/jrush/src/map.h",
-		"/D/work/prog/projects/c++/jrush/src/town.h",
-		"/D/work/prog/projects/c++/game/src/includes/map.h",
-		"/D/tmp/main.cpp",
-		"/D/tmp/list.h",
-		"/D/tmp/list.cpp",
-		"/D/work/prog/terms/2/labs/2-3/cpp/2 list/list/list.cpp",
-		"/D/work/prog/terms/2/labs/2-3/cpp/2 list/list/list.h",
-		"/D/work/prog/projects/c++/game/src/controllers/player.cpp",
-		"/D/work/prog/projects/c++/game/src/controllers/player.h",
-		"/D/work/prog/projects/c++/jrush/src/core/ai.h",
-		"/D/work/prog/projects/c++/jrush/src/core/ai.cpp",
-		"/D/work/prog/projects/c++/jrush/.gitignore",
-		"/D/work/prog/projects/c++/jrush/src/config/surface.h",
-		"/D/work/prog/projects/c++/jrush/src/core/view.cpp",
-		"/D/work/prog/projects/c++/jrush/src/config/debug.h",
-		"/D/work/prog/projects/c++/game/key_features.txt",
-		"/D/work/prog/terms/2/assembly/binary_math/binary_math/main.cpp",
-		"/D/docs/misc/meeting.txt",
-		"/D/work/prog/projects/c++/game/skills_to_show.txt",
-		"/D/work/prog/projects/c++/game/technical_info.txt",
-		"/D/work/prog/terms/2/assembly/binary_math/binary_math/functions.h",
-		"/D/work/prog/acm/cf/input.txt",
-		"/D/work/prog/terms/2/assembly/assembly.asm",
-		"/D/work/prog/terms/2/assembly/binary_math/binary_math/functions.cpp"
+		"/D/work/prog/projects/c++/jrush/src/controllers/player.h"
 	],
 	"find":
 	{
@@ -652,6 +727,90 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"details",
+			"stmt",
+			"request",
+			"errors",
+			"Exception",
+			"$mysqli",
+			"mysqli",
+			"NotFoundException",
+			"echoNow",
+			"fields",
+			"asset",
+			"$this->asset",
+			"bootstrap",
+			"\"",
+			"Gallery",
+			"articles",
+			"\"text\"",
+			"text",
+			"value",
+			"fields",
+			"getFieldsNames",
+			"author",
+			"title",
+			"arr1",
+			"save",
+			"article_post",
+			"strtolower",
+			"_POST",
+			"text",
+			"$this->translate",
+			"include",
+			"var_dump",
+			"vardump",
+			"title",
+			"\\d",
+			"title",
+			"$this->link",
+			"promo",
+			"echo",
+			"get",
+			"t",
+			"title",
+			"fields",
+			"article",
+			"error",
+			"this->article",
+			"1",
+			"article",
+			"routes",
+			"value",
+			"1",
+			"first",
+			"	",
+			"include",
+			"container",
+			"  ",
+			"    ",
+			"parameters",
+			"count",
+			"matches",
+			"ARRAY_FILTER_USE_KEY",
+			"value",
+			"subject",
+			"params",
+			"key",
+			"value",
+			"PATH_CONFIG",
+			"path_root",
+			"	",
+			"a",
+			"container",
+			"news",
+			"function",
+			"language",
+			"($connection",
+			"connection",
+			"$name",
+			"name",
+			"Name",
+			"name",
+			"getFieldNames",
+			"Model",
+			"host",
+			"controller",
 			"myCarousel",
 			"right",
 			"arouse",
@@ -695,91 +854,7 @@
 			"public",
 			"server",
 			"parse_url",
-			"setFactory",
-			"requestFactory",
-			"createRequestFromFactory",
-			"array",
-			"objects",
-			"attributes",
-			"object",
-			"Kernel",
-			"public",
-			"class",
-			"classes",
-			"\n	",
-			"name",
-			"Container",
-			"container",
-			"Container",
-			"Core",
-			"Nacho",
-			"filename",
-			"__FILE__",
-			"vdalue",
-			"200",
-			"2400",
-			"2900",
-			"600",
-			"10",
-			"300",
-			"1",
-			"500",
-			"0.5",
-			"Circle",
-			"TOWNVECTOR",
-			"main_window",
-			"hwnd",
-			"main_window",
-			"objects",
-			"level_1",
-			"level1",
-			"levels.h",
-			"TownMap",
-			"x",
-			"width",
-			"generateLevel",
-			"app->mainWindow",
-			"n",
-			"ptr",
-			"l",
-			"k",
-			"cout",
-			"os",
-			"o",
-			"double",
-			"	double deviation = 0.5 - 0.4 * ((double)::config::difficulty * 1. / (double)::config::max_difficulty);\n",
-			"double",
-			"Background",
-			"TitleText",
-			"button_x_text",
-			"settings",
-			"settings_y",
-			"y",
-			"x",
-			"hButton2",
-			"lparam",
-			"Нижняя",
-			"lparam",
-			"HWND",
-			"N",
-			" button",
-			"RegisterMainWindow",
-			"m_hwnd",
-			"HWND",
-			"px_y",
-			"px_x",
-			"size",
-			"ai",
-			"_aim",
-			"px",
-			"wndProc",
-			"hI",
-			"mapPathName",
-			"windowClassName",
-			"mainWindow",
-			"hwnd",
-			"eax",
-			"i"
+			"setFactory"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -787,6 +862,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"print",
+			"$this->echoAsset",
+			"echo $this->translate",
+			"$this->echoLink",
+			"\\t",
 			"\\n",
 			""
 		],
@@ -799,8 +879,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/James/Desktop/Новый текстовый документ (2).txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 32,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -851,7 +960,7 @@
 	"project": "test.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -861,284 +970,516 @@
 		"selected_items":
 		[
 			[
-				"homc",
-				"src\\controller\\HomeController.php"
+				"kern",
+				"src\\core\\controller\\Kernel.php"
 			],
 			[
-				"respo",
-				"src\\core\\Response.php"
+				"cnf",
+				"config\\config.yml"
 			],
 			[
-				"conaw",
-				"src\\core\\ContainerAware.php"
+				"ring",
+				"config\\routing.yml"
 			],
 			[
-				"con",
-				"src\\core\\Container.php"
-			],
-			[
-				"vi",
-				"src\\core\\View.php"
-			],
-			[
-				"route",
-				"src\\core\\Router.php"
+				"ru",
+				"resources\\translations\\ru.yml"
 			],
 			[
 				"hom",
 				"resources\\views\\home.phtml"
 			],
 			[
-				"conof",
+				"news",
+				"resources\\views\\news.phtml"
+			],
+			[
+				"conn",
+				"src\\core\\controller\\Connection.php"
+			],
+			[
+				"frm",
+				"src\\core\\model\\form\\Form.php"
+			],
+			[
+				"artfo",
+				"src\\app\\model\\ArticleForm.php"
+			],
+			[
+				"conne",
+				"src\\core\\controller\\Connection.php"
+			],
+			[
+				"mo",
+				"src\\core\\model\\Model.php"
+			],
+			[
+				"arti",
+				"src\\app\\model\\Article.php"
+			],
+			[
+				"form",
+				"src\\core\\model\\form\\Form.php"
+			],
+			[
+				"for",
+				"src\\core\\model\\form\\Form.php"
+			],
+			[
+				"model",
+				"src\\core\\model\\Model.php"
+			],
+			[
+				"stri",
+				"src\\core\\model\\form\\StrictTextField.php"
+			],
+			[
+				"stric",
+				"src\\core\\model\\form\\StrictTextField.php"
+			],
+			[
+				"text",
+				"src\\core\\model\\form\\TextField.php"
+			],
+			[
+				"artic",
+				"src\\app\\model\\Article.php"
+			],
+			[
+				"routin",
+				"config\\routing.yml"
+			],
+			[
+				"col",
+				"src\\core\\model\\Collection.php"
+			],
+			[
+				"artcol",
+				"src\\app\\model\\ArticleCollection.php"
+			],
+			[
+				"con",
+				"src\\core\\controller\\Connection.php"
+			],
+			[
+				"cole",
+				"src\\core\\model\\Collection.php"
+			],
+			[
+				"requ",
+				"src\\core\\model\\Request.php"
+			],
+			[
+				"newco",
+				"src\\app\\controller\\NewsController.php"
+			],
+			[
+				"fi",
+				"src\\core\\model\\form\\Field.php"
+			],
+			[
+				"texfi",
+				"src\\core\\model\\form\\TextField.php"
+			],
+			[
+				"str",
+				"src\\core\\model\\form\\StrictTextField.php"
+			],
+			[
+				"textfi",
+				"resources\\views\\text_field.phtml"
+			],
+			[
+				"edit",
+				"resources\\views\\article_edit.phtml"
+			],
+			[
+				"int",
+				"src\\core\\model\\form\\IntField.php"
+			],
+			[
+				"te",
+				"src\\core\\model\\form\\TextField.php"
+			],
+			[
+				"date",
+				"src\\core\\model\\form\\DateField.php"
+			],
+			[
+				"ima",
+				"src\\app\\model\\Image.php"
+			],
+			[
+				"vi",
+				"src\\core\\model\\View.php"
+			],
+			[
+				"gal",
+				"resources\\views\\gallery.phtml"
+			],
+			[
+				"tefi",
+				"src\\core\\model\\form\\TextField.php"
+			],
+			[
+				"in",
+				"src\\core\\model\\form\\IntField.php"
+			],
+			[
+				"tefiephp",
+				"src\\core\\model\\form\\TextField.php"
+			],
+			[
+				"fie",
+				"src\\core\\model\\form\\Field.php"
+			],
+			[
+				"log",
+				"src\\core\\controller\\Logger.php"
+			],
+			[
+				"lo",
+				"src\\core\\controller\\Logger.php"
+			],
+			[
+				"logge",
+				"src\\core\\controller\\Logger.php"
+			],
+			[
+				"ker",
+				"src\\core\\controller\\Kernel.php"
+			],
+			[
+				"cyml",
 				"config\\config.yml"
+			],
+			[
+				"cinf",
+				"src\\core\\model\\Form\\IntField.php"
+			],
+			[
+				"intf",
+				"src\\core\\model\\Form\\IntField.php"
+			],
+			[
+				"fiel",
+				"src\\core\\model\\Form\\Field.php"
+			],
+			[
+				"galc",
+				"src\\app\\controller\\GalleryController.php"
+			],
+			[
+				"galoc",
+				"src\\app\\controller\\GalleryController.php"
+			],
+			[
+				"fo",
+				"resources\\views\\footer.phtml"
+			],
+			[
+				"head",
+				"resources\\views\\header.phtml"
+			],
+			[
+				"home",
+				"resources\\views\\home.phtml"
+			],
+			[
+				"err",
+				"resources\\views\\error.phtml"
+			],
+			[
+				"roer",
+				"src\\core\\controller\\Router.php"
 			],
 			[
 				"conf",
 				"config\\config.yml"
 			],
 			[
+				"app",
+				"web\\app.php"
+			],
+			[
+				"homeco",
+				"src\\app\\controller\\HomeController.php"
+			],
+			[
+				"new",
+				"resources\\views\\news.phtml"
+			],
+			[
+				"art",
+				"resources\\views\\article.phtml"
+			],
+			[
+				"teare",
+				"resources\\views\\textarea_field.phtml"
+			],
+			[
+				"edi",
+				"resources\\views\\article_edit.phtml"
+			],
+			[
 				"confi",
 				"config\\config.yml"
 			],
 			[
-				"json",
-				"composer.json"
+				"foore",
+				"resources\\views\\footer.phtml"
 			],
 			[
-				"requ",
-				"src\\core\\Request.php"
+				"foote",
+				"resources\\views\\footer.phtml"
 			],
 			[
-				"rout",
-				"config\\routing.yml"
+				"gall",
+				"resources\\views\\gallery.phtml"
 			],
 			[
-				"rou",
-				"src\\core\\Router.php"
+				"colle",
+				"src\\core\\model\\Collection.php"
 			],
 			[
-				"comj",
-				"composer.json"
+				"imageco",
+				"src\\app\\model\\ImageCollection.php"
 			],
 			[
-				"com",
-				"composer.json"
+				"arcol",
+				"src\\app\\model\\ArticleCollection.php"
 			],
 			[
-				"psr",
-				"vendor\\composer\\autoload_psr4.php"
+				"da",
+				"src\\core\\model\\Form\\DateField.php"
 			],
 			[
-				"resp",
-				"src\\core\\Response.php"
+				"field",
+				"src\\core\\model\\Form\\Field.php"
+			],
+			[
+				"cone",
+				"src\\core\\controller\\Connection.php"
+			],
+			[
+				"artiphp",
+				"src\\app\\model\\Article.php"
+			],
+			[
+				"article",
+				"src\\app\\model\\ArticleCollection.php"
+			],
+			[
+				"articlmo",
+				"resources\\views\\article_promo.phtml"
+			],
+			[
+				"modl",
+				"src\\core\\model\\Model.php"
+			],
+			[
+				"odel",
+				"src\\core\\model\\Model.php"
+			],
+			[
+				"contro",
+				"src\\core\\controller\\Controller.php"
+			],
+			[
+				"newsco",
+				"src\\app\\controller\\NewsController.php"
+			],
+			[
+				"router",
+				"src\\core\\controller\\Router.php"
+			],
+			[
+				"eredi",
+				"resources\\views\\article_edit.phtml"
+			],
+			[
+				"atredi",
+				"resources\\views\\article_edit.phtml"
+			],
+			[
+				"re",
+				"src\\core\\model\\Request.php"
+			],
+			[
+				"route",
+				"src\\core\\controller\\Router.php"
+			],
+			[
+				"arted",
+				"resources\\views\\article_edit.phtml"
+			],
+			[
+				"articfo",
+				"src\\app\\model\\ArticleForm.php"
+			],
+			[
+				"r",
+				"resources\\translations\\ru.yml"
 			],
 			[
 				"ap",
 				"web\\app.php"
 			],
 			[
-				"kerne",
-				"src\\core\\Kernel.php"
+				"artpht",
+				"resources\\views\\article.phtml"
 			],
 			[
-				"ker",
-				"src\\core\\Kernel.php"
+				"pro",
+				"resources\\views\\article_promo.phtml"
 			],
 			[
-				"conta",
-				"src\\core\\Container.php"
+				"prom",
+				"resources\\views\\article_promo.phtml"
 			],
 			[
-				"compo",
-				"composer.json"
+				"nes",
+				"tmp\\news.html"
 			],
 			[
-				"re",
-				"src\\core\\Request.php"
+				"routi",
+				"config\\routing.yml"
 			],
 			[
-				"co",
-				"src\\core\\Container.php"
+				"view",
+				"src\\core\\model\\View.php"
 			],
 			[
-				"paba",
-				"src\\core\\ParameterBag.php"
-			],
-			[
-				"app",
-				"web\\app.php"
-			],
-			[
-				"res",
-				"src\\core\\Response.php"
-			],
-			[
-				"kern",
-				"src\\core\\Kernel.php"
-			],
-			[
-				"parba",
-				"src\\core\\ParameterBag.php"
-			],
-			[
-				"ro",
-				"src\\core\\Router.php"
-			],
-			[
-				"paa",
-				"src\\core\\ParameterBag.php"
-			],
-			[
-				"",
-				"src\\core\\ParameterBag.php"
-			],
-			[
-				"pab",
-				"src\\core\\ParameterBag.php"
-			],
-			[
-				"log",
-				"src\\core\\Logger.php"
-			],
-			[
-				"sec",
-				"src\\core\\Security.php"
-			],
-			[
-				"rote",
-				"src\\core\\Router.php"
+				"fiedl",
+				"src\\core\\model\\Form\\Field.php"
 			],
 			[
 				"req",
-				"src\\core\\Request.php"
+				"src\\core\\model\\Request.php"
 			],
 			[
-				"cont",
-				"src\\core\\Container.php"
+				"foo",
+				"resources\\views\\footer.phtml"
 			],
 			[
-				"routph",
-				"src\\core\\Router.php"
+				"connec",
+				"src\\core\\controller\\Connection.php"
 			],
 			[
-				"bocp",
-				"prog\\projects\\c++\\jrush\\src\\controllers\\bot.cpp"
+				"articleco",
+				"src\\app\\model\\ArticleCollection.php"
 			],
 			[
-				"townh",
-				"prog\\projects\\c++\\jrush\\src\\core\\town.h"
+				"neco",
+				"src\\app\\controller\\NewsController.php"
 			],
 			[
-				"both",
-				"prog\\projects\\c++\\jrush\\src\\controllers\\bot.h"
+				"config",
+				"config\\config.yml"
 			],
 			[
-				"vicp",
-				"prog\\projects\\c++\\jrush\\src\\graphics\\view.cpp"
+				"conta",
+				"src\\core\\model\\Container.php"
 			],
 			[
-				"towncp",
-				"prog\\projects\\c++\\jrush\\src\\core\\town.cpp"
+				"artmo",
+				"vendor\\symfony\\yaml\\Symfony\\Component\\Yaml\\Exception\\RuntimeException.php"
 			],
 			[
-				"level",
-				"prog\\projects\\c++\\jrush\\src\\config\\levels.cpp"
+				"modeph",
+				"src\\core\\model\\Model.php"
 			],
 			[
-				"botcp",
-				"prog\\projects\\c++\\jrush\\src\\controllers\\bot.cpp"
+				"coll",
+				"src\\core\\model\\Collection.php"
 			],
 			[
-				"bot",
-				"prog\\projects\\c++\\game\\src\\controllers\\bot.h"
+				"artcle",
+				"src\\app\\model\\Article.php"
 			],
 			[
-				"inter",
-				"prog\\projects\\c++\\jrush\\src\\core\\interfaces.h"
+				"rut",
+				"config\\routing.yml"
 			],
 			[
-				"527",
-				"prog\\acm\\cf\\527B.cpp"
+				"cnfig",
+				"config\\config.yml"
 			],
 			[
-				"tmp",
-				"prog\\terms\\2\\lections\\Examples\\tmp.cpp"
+				"viw",
+				"src\\core\\model\\View.php"
 			],
 			[
-				"diction",
-				"prog\\projects\\c++\\vocabulary\\core\\dictionary.h"
+				"kerne",
+				"src\\core\\controller\\Kernel.php"
 			],
 			[
-				"test.cpp",
-				"prog\\projects\\c++\\vocabulary\\test.cpp"
+				"respo",
+				"src\\core\\model\\Response.php"
 			],
 			[
-				"databaseh",
-				"prog\\projects\\c++\\dbtest\\dbtest\\dbwrapper\\database.h"
+				"rou",
+				"src\\core\\controller\\Router.php"
 			],
 			[
-				"stringsmain",
-				"fpmi\\assemble\\strings\\strings\\main.cpp"
+				"ro",
+				"config\\routing.yml"
 			],
 			[
-				"fucntions.asm",
-				"fpmi\\assemble\\array\\array\\functions.asm"
+				"conawa",
+				"src\\core\\model\\ContainerAware.php"
 			],
 			[
-				"functions.asm",
-				"fpmi\\assemble\\array\\array\\functions.asm"
+				"rout",
+				"src\\core\\controller\\Router.php"
 			],
 			[
-				"test",
-				"cpp\\trash\\test.cpp"
+				"viph",
+				"src\\core\\model\\View.php"
 			],
 			[
-				"trashtes",
-				"cpp\\trash\\test.cpp"
+				"homc",
+				"src\\app\\controller\\HomeController.php"
 			],
 			[
-				"word",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\word.h"
+				"routp",
+				"src\\core\\controller\\Router.php"
 			],
 			[
-				"2-6adja",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\adjacency.h"
+				"kernel",
+				"src\\core\\controller\\Kernel.php"
 			],
 			[
-				"2-6conf",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\config.h"
+				"ho",
+				"src\\app\\controller\\HomeController.php"
 			],
 			[
-				"en",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\en.txt"
+				"articl",
+				"src\\app\\model\\ArticleCollection.php"
 			],
 			[
-				"-",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\word.tpp"
+				"conep",
+				"src\\core\\controller\\Connection.php"
 			],
 			[
-				"2-6main",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\main.cpp"
+				"mode",
+				"src\\core\\model\\Model.php"
 			],
 			[
-				"surfac",
-				"git\\rj\\src\\config\\surface.h"
+				"homcp",
+				"src\\app\\controller\\HomeController.php"
 			],
 			[
-				"the",
-				"git\\rj\\src\\core\\thewayithink.h"
+				"com",
+				"composer.json"
 			],
 			[
-				"contatp",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\container.tpp"
+				"conaw",
+				"src\\core\\ContainerAware.php"
 			],
 			[
-				"container",
-				"fpmi\\labs\\2-6\\cpp\\Vocabulary\\container.h"
-			],
-			[
-				"c+1",
-				"fpmi\\theory\\C++\\Ассемблер_Обработка_чисел\\1.cpp"
+				"conof",
+				"config\\config.yml"
 			]
 		],
 		"width": 0.0
@@ -1169,7 +1510,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 253.0,
+	"side_bar_width": 261.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

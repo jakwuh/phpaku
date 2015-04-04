@@ -25,14 +25,12 @@ slider:
         second: Перейти к новостям
         third: Добавить новость
     caption:
-        first: Вперед!
+        first: Внимание!
         second: Это оно!
         third: Как раз то, что Вы ищете
     content:
         first: >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           Из-за ограничений браузера при просмотре с localhost стрелки слева могут быть загружены некорректно или не загружены
         second: >
             Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
