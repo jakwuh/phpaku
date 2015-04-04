@@ -2,10 +2,31 @@
 
    <div class="container theme-showcase" role="main">
       <div class="jumbotron" style="margin-top: 80px;">
-       
-		<form action="<?php $this->echoLink("article_update", array("id" => $this->form->get("id"))) ?>" class="form-horizontal" method="POST">
+       	<?php 
+       		if ($this->form->get("id") > 0)
+       			$action = $this->link("article_update", array("id" => $this->form->get("id")));
+       		else
+       			$action = $this->link("article_post");
+       	?>
+		<form action="<?php echo $action ?>" class="form-horizontal" method="POST">
 		<?php 
 			$form = $this->form;
+			if (count($form->errors) != 0) { ?>
+				<div class="row">
+					<div class="col-sm-push-2 col-sm-10">
+						<p class="bg-danger" style="padding: 0 10px;">
+							<?php 
+								foreach($form->getFields() as $field) {
+									if ($field->error) {
+										echo $this->translate($form->getName() . "." . $field->name . "." . $field->error);
+										echo "<br>";
+									}
+								}
+							?>
+						</p>
+					</div>
+				</div>
+		<?php }
 			$this->include_view("text_field", array(
 				"name" => "form[title]", 
 				"value" => $form->get("title"), 

@@ -22,7 +22,7 @@ abstract class Model
 	{
 		if ($this->has($key))
 			$this->fields[$key]->set($value);
-		else 
+		else ;
 			// :ERROR
 		return $this;
 	}
@@ -48,6 +48,14 @@ abstract class Model
 		return array_key_exists($key, $this->fields);
 	}
 
+	public function getType($key)
+	{
+		if ($this->has($key))
+			return $this->fields[$key]->getType();
+		else ;
+			// ERROR:
+	}
+
 	public function update(Connection $connection)
 	{
 		return $connection->updateModel($this);
@@ -56,6 +64,7 @@ abstract class Model
 	public function load(Connection $connection)
 	{
 		return $connection->selectModel($this);
+
 	}
 
 	public function save(Connection $connection)

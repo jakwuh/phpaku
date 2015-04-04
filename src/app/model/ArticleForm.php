@@ -18,4 +18,9 @@ class ArticleForm extends Form
 		$this->fields["text"] = new TextField("text");
 		$this->fields["author"] = new StrictTextField("author");
 	}
+
+	public static function getName()
+	{
+		return "article_form";
+	}
 }

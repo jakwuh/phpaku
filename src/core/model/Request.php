@@ -17,7 +17,13 @@ class Request extends ContainerAware
 
 		$request->set("method", strtolower($_SERVER["REQUEST_METHOD"]));
 		$request->set("post", array_key_exists("form", $_POST) ? $_POST["form"] : array());
-		$request->set("path", substr($_SERVER["REQUEST_URI"], 9));
+		$path = $_SERVER["REQUEST_URI"];
+		$base = $_SERVER["BASE"];
+		while ($base[0] == $path[0]) {
+			$path = substr($path, 1);
+			$base = substr($base, 1);
+		}
+		$request->set("path", $path);
 		return $request;
 	}
 

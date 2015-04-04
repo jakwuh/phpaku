@@ -2,7 +2,7 @@
 
 namespace Aku\Core\Model\Form;
 
-class Field
+abstract class Field
 {
 	public $name;
 	public $value;
@@ -20,13 +20,15 @@ class Field
 
 	public function set($value)
 	{
-		$error = null;
+		$this->error = "";;
 		$this->value = $value;
-		return $error;
+		return $this->error;
 	}
 
 	public function raw()
 	{
 		return $this->get();
 	}
+
+	abstract public static function getType();
 }

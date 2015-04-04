@@ -13,6 +13,11 @@ class DateField extends Field
 		$this->value = new \DateTime();
 	}
 
+	public static function getType()
+	{
+		return "s";
+	}
+
 	public function get()
 	{
 		return $this->value;
@@ -27,6 +32,6 @@ class DateField extends Field
 
 	public function raw()
 	{
-		return "\"" . $this->value->format('Y-m-d H:i:s') . "\"";
+		return $this->value->format('Y-m-d H:i:s');
 	}
 }

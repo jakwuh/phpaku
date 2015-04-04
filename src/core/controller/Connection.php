@@ -5,6 +5,7 @@ namespace Aku\Core\Controller;
 use Aku\Core\Model\Container;
 use Aku\Core\Model\Model;
 use Aku\Core\Model\Collection;
+use Aku\Core\Model\Exception\ApplicationException;
 
 class Connection
 {
@@ -18,20 +19,32 @@ class Connection
 		$user = $container->get("settings")["db_user"];
 		$password = $container->get("settings")["db_password"];
 		$this->mysqli = new \mysqli($host, $user, $password, $database);
-		// ERROR:
-		$this->mysqli->set_charset("utf8");
-		// ERROR:
+		if ($this->mysqli->connect_errno) {
+			$container->get("logger")->log($this, $this->mysqli->connect_error);
+			throw new ApplicationException();
+		}
+		if (!$this->mysqli->set_charset("utf8")) {
+			$container->get("logger")->log($this, $this->mysqli->connect_error);
+			throw new ApplicationException();
+		}
 	}
 
 	public function saveModel(Model $model)
 	{
 		$fields = $model::getFieldsNames();
-		$values = implode(",", array_map(
-			function($key) use ($model){ return $model->raw($key); }, $fields));
 		$table = $model::getTableName() . "(" . implode(",", $fields) . ")";
-		$query = "INSERT INTO {$table} VALUES( {$values} )";
-
-		$result = $this->mysqli->query($query);
+		$values =  array_map(function ($key) use ($model){ return $model->raw($key); }, $fields);
+		$references = array();
+		foreach ($values as $key => &$value) { $references[$key] = &$value; }
+		$types = array_map(function($key) use ($model){ return $model->getType($key); }, $fields);
+		$types_string = implode("", $types);
+		$omits = "?" . implode( "", array_pad(array(), count($fields) - 1, ",?"));
+		
+		$stmt = $this->mysqli->prepare("INSERT INTO {$table} VALUES ({$omits})");
+		if (!$stmt) throw new ApplicationException();
+		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types_string), $references));
+		
+		$result = $stmt->execute();
 
 		if ($result) {
 			return true;
@@ -45,9 +58,12 @@ class Connection
 		$table = $model::getTableName();
 		$condition = $model->getWhereStatement();
 		$extra = $model->getExtraStatement();
-		$query = "SELECT {$fields} FROM {$table} WHERE {$condition} {$extra}";
 
-		$result = $this->mysqli->query($query);
+		$stmt = $this->mysqli->prepare("SELECT {$fields} FROM {$table} WHERE {$condition} {$extra}");
+		if (!$stmt) throw new ApplicationException();
+		$stmt->execute();
+
+		$result = $stmt->get_result();
 
 		if ($result) {
 			if ($row = $result->fetch_assoc()) {
@@ -63,17 +79,21 @@ class Connection
 	public function updateModel(Model $model)
 	{
 		$fields = $model::getFieldsNames();
-		$values = implode(",", array_map(
-			function($key) use ($model){ return $key . "=" . $model->raw($key); }, $fields));
 		$table = $model::getTableName();
 		$condition = $model->getWhereStatement();
-		$query = "UPDATE {$table} SET {$values} WHERE {$condition}";
+		$values =  array_map(function ($key) use ($model){ return $model->raw($key); }, $fields);
+		$references = array();
+		foreach ($values as $key => &$value) { $references[$key] = &$value; }
+		$types = array_map(function($key) use ($model){ return $model->getType($key); }, $fields);
+		$types_string = implode("", $types);
+		$omits = implode( ",", array_map(function($name){ return "{$name}=?"; }, $fields));
+		
+		$stmt = $this->mysqli->prepare("UPDATE {$table} SET {$omits} WHERE {$condition}");
+		if (!$stmt) throw new ApplicationException();
+		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types_string), $references));
 
-		$result = $this->mysqli->query($query);
-		if ($result) {
-			return true;
-		}
-		return false;
+		$result = $stmt->execute();
+		return $result;
 	}
 
 	public function selectCollection(Collection $collection)
@@ -82,13 +102,17 @@ class Connection
 		$table = $collection::getTableName();
 		$condition = $collection->getWhereStatement();
 		$extra = $collection->getExtraStatement();
+		
 		if (empty($condition))
 			$query = "SELECT {$fields} FROM {$table} {$extra}";
 		else
 			$query = "SELECT {$fields} FROM {$table} WHERE {$condition} {$extra}";
 
+		$stmt = $this->mysqli->prepare($query);
+		if (!$stmt) throw new ApplicationException();
+		$stmt->execute();
 
-		$result = $this->mysqli->query($query);
+		$result = $stmt->get_result();
 
 		if ($result) {
 			$classname = $collection::getClassName();

@@ -5,8 +5,9 @@ namespace Aku\Core\Model\Form;
 use Aku\Core\Model\Form\Field;
 use Aku\Core\Model\Model;
 use Aku\Core\Model\Request;
+use Aku\Core\Model\Exception\ApplicationException;
 
-class Form
+abstract class Form
 {
 	protected $fields;
 	public $errors;
@@ -21,13 +22,24 @@ class Form
 	{
 		if (array_key_exists($key, $this->fields))
 			return $this->fields[$key]->get();
-		else ;
-		// ERROR:
+		else 
+			throw new ApplicationException();
 	}
 
 	public function out($key)
 	{
 		echo $this->get($key);
+	}
+
+	public function getFields()
+	{
+		return $this->fields;
+	}
+
+	public function bind($key, $value)
+	{
+		$error = $this->fields[$key]->set($value);
+		if ($error) $this->errors[] = $error;
 	}
 
 	public function bindToModel(Model $model)
@@ -40,8 +52,7 @@ class Form
 	public function bindFromModel(Model $model)
 	{
 		foreach ($this->fields as $key => $value) {
-			$error = $this->fields[$key]->set($model->get($key));
-			if ($error) $errors[] = $error;
+			$this->bind($key, $model->get($key));
 		}
 	}
 
@@ -49,8 +60,10 @@ class Form
 	{
 		$get = function(&$var){ return $var; };
 		foreach ($this->fields as $key => $value) {
-			$error = $this->fields[$key]->set($get($request->get("post")[$key]));
-			if ($error) $errors[] = $error;
+			$this->bind($key, $get($request->get("post")[$key]));
 		}
 	}
+
+	abstract public static function getName();
+
 }

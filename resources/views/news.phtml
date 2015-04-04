@@ -5,11 +5,15 @@
 		<?php if ($this->articles->count() == 0) { ?>
 			<h1><?php echo $this->translate("news.empty.caption"); ?></h1>
 			<p><?php echo $this->translate("news.empty.text"); ?></p>
+			<p><a class="btn btn-primary btn-lg" href="<?php $this->echoLink("article_add"); ?>" role="button"><?php echo $this->translate("article_form.add") ?> &raquo;</a></p>
 		<?php } else { ?>
 		<?php $article = $this->articles->get(0); ?>
 			<h1><?php echo $article->get("title"); ?></h1>
 			<p><?php echo $article->get("promo_text"); ?></p>
-			<p><a class="btn btn-primary btn-lg" href="<?php $this->echoLink("article_show", array("id" => $article->get("id"))); ?>" role="button"><?php echo $this->translate("misc.details") ?> &raquo;</a></p>
+			<p>
+				<a class="btn btn-primary btn-lg" href="<?php $this->echoLink("article_show", array("id" => $article->get("id"))); ?>" role="button"><?php echo $this->translate("misc.details") ?> &raquo;</a>
+				<a class="btn btn-default btn-lg" href="<?php $this->echoLink("article_add"); ?>" role="button"><?php echo $this->translate("article_form.add") ?> &raquo;</a>
+				</p>
 		<?php } ?>
 	</div>
 </div>

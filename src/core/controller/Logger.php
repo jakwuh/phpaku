@@ -13,7 +13,7 @@ class Logger
 		$this->file = fopen(PATH_ROOT . "/src/errors.log", "a");
 	}
 
-	public function log($object, string $string)
+	public function log($object, $string = null)
 	{
 		$time = new \DateTime();
 		$string =

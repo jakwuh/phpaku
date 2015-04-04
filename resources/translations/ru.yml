@@ -1,4 +1,4 @@
-company: Company
+company: StudyQA
 
 error: Ошибка
 error_home: На главную
@@ -21,27 +21,43 @@ misc:
 
 slider:
     button:
-        first:
-        second:
-        third:
+        first: Перейти в галерею
+        second: Перейти к новостям
+        third: Добавить новость
     caption:
-        first: 
-        second:
-        third:
+        first: Вперед!
+        second: Это оно!
+        third: Как раз то, что Вы ищете
     content:
-        first:
-        second:
-        third:
-
+        first: >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        second: >
+            Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+        third: >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
 promo:
-    caption:
-        first: 
-        second:
-        third:
     content:
-        first:
-        second:
-        third:
+        first: >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        second: >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        third: >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.  Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    caption:
+        first: Быстрее
+        second: Выше
+        third: Сильнее
 
 news:
     goto: Новости
@@ -60,3 +76,12 @@ article:
 
 gallery:
     add: Добавить
+
+article_form:
+    add: Добавить новость
+    title:
+        empty: Заполните название
+    promo_text:
+        empty: Заполните промо-текст
+    text:
+        empty: Заполните текст
