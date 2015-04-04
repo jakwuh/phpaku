@@ -2,7 +2,7 @@
 <br>
 - Скопировать проект в любую папку на локальном сервере
 ```
-    git clone
+    git clone https://github.com/akwuh/test.git
 ```
 - Импортировать БД `test.sql` из папки `sql\`
 <br>
