@@ -5,3 +5,5 @@
 [05-04-15 12:20:48] C:\xampp\htdocs\test\src\core\model\View.php : 107: try to access unexisting property: $this->form
 [05-04-15 12:21:07] C:\xampp\htdocs\test\src\core\model\View.php : 107: try to access unexisting property: $this->form
 [05-04-15 12:21:32] C:\xampp\htdocs\test\src\core\model\View.php : 107: try to access unexisting property: $this->form
+[05-04-15 12:48:01] C:\xampp\htdocs\test\src\core\controller\Router.php : 70: route not found: /includes/img/loading.gif
+[05-04-15 12:48:02] C:\xampp\htdocs\test\src\core\controller\Router.php : 70: route not found: /includes/img/play-pause.svg

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Апр 04 2015 г., 05:54
+-- Время создания: Апр 05 2015 г., 12:53
 -- Версия сервера: 5.6.20
 -- Версия PHP: 5.5.15
 
@@ -33,7 +33,21 @@ CREATE TABLE IF NOT EXISTS `article` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `title` text,
   `promo_text` text
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=47 ;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `csrf`
+--
+
+CREATE TABLE IF NOT EXISTS `csrf` (
+`id` int(11) NOT NULL,
+  `sid` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `action` varchar(255) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=247 ;
 
 -- --------------------------------------------------------
 
@@ -46,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `author` varchar(255) DEFAULT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `path` text
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Indexes for dumped tables
@@ -56,6 +70,12 @@ CREATE TABLE IF NOT EXISTS `image` (
 -- Indexes for table `article`
 --
 ALTER TABLE `article`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `csrf`
+--
+ALTER TABLE `csrf`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -72,12 +92,17 @@ ALTER TABLE `image`
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
+--
+-- AUTO_INCREMENT for table `csrf`
+--
+ALTER TABLE `csrf`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=247;
 --
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
