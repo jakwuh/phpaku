@@ -4,6 +4,7 @@ namespace Aku\Core\Controller;
 
 use Aku\Core\Controller\Router;
 use Aku\Core\Controller\Guard;
+use Aku\Core\Controller\CSRFGuard;
 use Aku\Core\Controller\Logger;
 use Aku\Core\Controller\Connection;
 use Aku\Core\Model\Container;
@@ -27,6 +28,7 @@ class Kernel extends ContainerAware
 			$this->logger = new Logger($this->container);
 			$this->router = new Router($this->container);
 			$this->guard = new Guard($this->container);
+			$this->csrf_guard = new CSRFGuard($this->container);
 			$this->connection = new Connection($this->container);
 			return;
 		} catch (\Exception $e) {

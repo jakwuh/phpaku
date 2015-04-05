@@ -3,17 +3,19 @@
 namespace Aku\Core\Controller;
 
 use Aku\Core\Model\Container;
+use Aku\Core\Model\ContainerAware;
 use Aku\Core\Model\Model;
 use Aku\Core\Model\Collection;
 use Aku\Core\Model\Exception\ApplicationException;
 
-class Connection
+class Connection extends ContainerAware
 {
 
 	private $mysqli;
 
 	function __construct(Container $container)
 	{
+		$this->container = $container;
 		$host = $container->get("settings")["db_host"];
 		$database = $container->get("settings")["db_name"];
 		$user = $container->get("settings")["db_user"];
@@ -30,17 +32,16 @@ class Connection
 	public function saveModel(Model $model)
 	{
 		$fields = $model::getFieldsNames();
-		$table = $model::getTableName() . "(" . implode(",", $fields) . ")";
-		$values =  array_map(function ($key) use ($model){ return $model->raw($key); }, $fields);
-		$references = array();
-		foreach ($values as $key => &$value) { $references[$key] = &$value; }
-		$types = array_map(function($key) use ($model){ return $model->getType($key); }, $fields);
-		$types_string = implode("", $types);
-		$omits = "?" . implode( "", array_pad(array(), count($fields) - 1, ",?"));
-		
+		$table = $model::getTableName() . "(". self::glueArray($fields) . ")";
+		$values = array();                                                                   
+		$references = self::generateReferences($model, $fields, $values);
+		$types = self::generateTypes($model, $fields);
+		$omits = implode( ",", array_pad(array(), count($fields), "?"));
+
 		$stmt = $this->mysqli->prepare("INSERT INTO {$table} VALUES ({$omits})");
+
 		if (!$stmt) throw new ApplicationException("cannot prepare statement");
-		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types_string), $references));
+		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types), $references));
 		
 		$result = $stmt->execute();
 		return $result;
@@ -48,13 +49,17 @@ class Connection
 
 	public function selectModel(Model $model)
 	{
-		$fields = implode(",", $model::getFieldsNames());
+		$fields = self::glueArray($model::getFieldsNames());
 		$table = $model::getTableName();
-		$condition = $model->getWhereStatement();
-		$extra = $model->getExtraStatement();
+		$condition = self::generateOmits($model->getWhereFields(), " AND ");
+		$extra = $model->getExtraStatement();               
+		$values = array();                                                                   
+		$references = self::generateReferences($model, $model::getWhereFields(), $values);
+		$types = self::generateTypes($model, $model::getWhereFields());
 
-		$stmt = $this->mysqli->prepare("SELECT {$fields} FROM {$table} WHERE {$condition} {$extra}");
+		$stmt = $this->mysqli->prepare("SELECT {$fields} FROM `{$table}` WHERE {$condition} {$extra}");
 		if (!$stmt) throw new ApplicationException("cannot prepare statement");
+		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types), $references));
 		$stmt->execute();
 
 		$result = $stmt->get_result();
@@ -74,17 +79,31 @@ class Connection
 	{
 		$fields = $model::getFieldsNames();
 		$table = $model::getTableName();
-		$condition = $model->getWhereStatement();
-		$values =  array_map(function ($key) use ($model){ return $model->raw($key); }, $fields);
-		$references = array();
-		foreach ($values as $key => &$value) { $references[$key] = &$value; }
-		$types = array_map(function($key) use ($model){ return $model->getType($key); }, $fields);
-		$types_string = implode("", $types);
-		$omits = implode( ",", array_map(function($name){ return "{$name}=?"; }, $fields));
+		$omits = self::generateOmits($fields);
+		$condition = self::generateOmits($model::getWhereFields(), " AND ");
+		$values = array();
+		$references = self::generateReferences($model, array_merge($fields, $model::getWhereFields()), $values);
+		$types = self::generateTypes($model, array_merge($fields, $model::getWhereFields()));
 		
-		$stmt = $this->mysqli->prepare("UPDATE {$table} SET {$omits} WHERE {$condition}");
+		$stmt = $this->mysqli->prepare("UPDATE `{$table}` SET {$omits} WHERE {$condition}");
 		if (!$stmt) throw new ApplicationException("cannot prepare statement");
-		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types_string), $references));
+		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types), $references));
+
+		$result = $stmt->execute();
+		return $result;
+	}
+
+	public function removeModel(Model $model)
+	{
+		$table = $model::getTableName();
+		$condition = self::generateOmits($model::getWhereFields(), " AND ");
+		$values = array();                                                                   
+		$references = self::generateReferences($model, $model::getWhereFields(), $values);
+		$types = self::generateTypes($model, $model::getWhereFields());
+
+		$stmt = $this->mysqli->prepare("DELETE FROM {$table} WHERE {$condition}");
+		if (!$stmt) throw new ApplicationException("cannot prepare statement");
+		call_user_func_array(array($stmt, "bind_param"), array_merge(array($types), $references));
 
 		$result = $stmt->execute();
 		return $result;
@@ -117,4 +136,35 @@ class Connection
 		}
 		return false;
 	}
+
+	// `field1`=?,`field2` = ?
+	public static function generateOmits(array $fields, $delimiter = ",")
+	{
+		$omits = implode( $delimiter, array_map(function($name){ return "`{$name}`=?"; }, $fields));
+		return $omits;
+	}
+
+	public static function generateReferences(Model $model, array $fields, array &$values)
+	{
+		foreach ($fields as $key) {$values[] = $model->raw($key); }
+		$references = array();
+		foreach ($values as &$value) { $references[] = &$value; }
+		return $references;
+	}
+
+	public static function generateTypes($model, $fields)
+	{
+		foreach ($fields as $key) {
+			$types[] = $model->getType($key);
+		}
+		$types_string = implode("", $types);
+		return $types_string;
+	}
+
+	public static function glueArray(array $names, $delimiter = ",", $wrapper = "`")
+	{
+		$strings = array_map(function($value) use ($wrapper) { return $wrapper . $value . $wrapper; }, $names);
+		return implode($delimiter, $strings);
+	}
+
 }

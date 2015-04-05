@@ -16,10 +16,9 @@ class Image extends Model
 		parent::__construct($fields);
 	}
 
-	public function getWhereStatement()
+	public static function getWhereFields()
 	{
-		$id = $this->get("id");
-		return "id = {$id}";
+		return array("id");
 	}
 
 	public static function getFieldsNames()

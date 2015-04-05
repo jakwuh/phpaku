@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"load",
-				"loadArticle"
+				"Art",
+				"Article"
 			],
 			[
-				"Art",
-				"ArticleForm"
+				"load",
+				"loadArticle"
 			],
 			[
 				"Pa",
@@ -367,14 +367,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/D/work/prog/projects/c++/jrush/src/controllers/bot.cpp",
-			"settings":
-			{
-				"buffer_size": 624,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -629,6 +621,18 @@
 	],
 	"file_history":
 	[
+		"/D/work/prog/projects/c++/jrush/src/config/levels.cpp",
+		"/D/work/prog/projects/c++/jrush/src/config/levels.yml",
+		"/D/work/prog/projects/c++/jrush/src/config/test.cpp",
+		"/d/media/soft/cmd/jrush.bat",
+		"/C/xampp/htdocs/test/src/core/model/form/Form.php",
+		"/C/xampp/htdocs/test/src/app/controller/NewsController.php",
+		"/d/media/soft/cmd/test.bat",
+		"/D/work/prog/projects/c++/jrush/src/controllers/bot.cpp",
+		"/C/xampp/htdocs/test/resources/views/home.phtml",
+		"/C/xampp/htdocs/test/resources/translations/ru.yml",
+		"/D/media/soft/cmd/test.bat",
+		"/C/xampp/htdocs/test/src/errors.log",
 		"/D/work/prog/projects/c++/jrush/src/main.cpp",
 		"/D/media/soft/cmd/jrush.bat",
 		"/D/work/prog/projects/c++/jrush/skills_to_show.txt",
@@ -636,13 +640,9 @@
 		"/C/Users/James/Desktop/changes/functions.h",
 		"/D/media/soft/cmd/xampp.bat",
 		"/C/xampp/htdocs/test/src/app/controller/HomeController.php",
-		"/C/xampp/htdocs/test/src/app/controller/NewsController.php",
 		"/C/xampp/htdocs/test/src/core/model/View.php",
-		"/C/xampp/htdocs/test/src/core/model/form/Form.php",
 		"/C/xampp/htdocs/test/resources/views/article_edit.phtml",
-		"/C/xampp/htdocs/test/resources/translations/ru.yml",
 		"/C/xampp/htdocs/test/src/core/controller/Kernel.php",
-		"/C/xampp/htdocs/test/src/errors.log",
 		"/C/xampp/htdocs/test/src/core/model/Model.php",
 		"/C/xampp/htdocs/test/src/app/model/ArticleForm.php",
 		"/C/Users/James/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
@@ -677,7 +677,6 @@
 		"/C/xampp/htdocs/test/src/core/model/form/Field.php",
 		"/C/xampp/htdocs/test/vendor/symfony/yaml/Symfony/Component/Yaml/Exception/ParseException.php",
 		"/C/xampp/htdocs/test/vendor/symfony/yaml/Symfony/Component/Yaml/Parser.php",
-		"/C/xampp/htdocs/test/resources/views/home.phtml",
 		"/C/xampp/htdocs/test/resources/views/error.phtml",
 		"/C/Users/James/Downloads/HttpCopy/ReadMe.txt",
 		"/C/xampp/htdocs/test/web/app.php",
@@ -714,7 +713,6 @@
 		"/C/xampp/htdocs/test/web/includes/js/jquery.iframe.js",
 		"/D/work/prog/projects/c++/jrush/src/core/application.cpp",
 		"/D/work/prog/projects/c++/jrush/src/config/levels.h",
-		"/D/work/prog/projects/c++/jrush/src/config/levels.cpp",
 		"/C/xampp/htdocs/test/src/core/model/Form/TextField.php",
 		"/C/xampp/htdocs/test/resources/views/article_promo.phtml",
 		"/C/xampp/htdocs/test/tmp/news.html",
@@ -750,13 +748,7 @@
 		"/C/xampp/htdocs/test/src/core/Logger.php",
 		"/C/xampp/htdocs/test/src/core/Security.php",
 		"/C/xampp/htdocs/test/web/.htaccess",
-		"/C/Users/James/AppData/Local/Temp/_tc/wf/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php",
-		"/C/Users/James/AppData/Local/Temp/_tc/wf/web/app.php",
-		"/C/Users/James/AppData/Local/Temp/_tc/tr/taskroom.ru/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php",
-		"/C/xampp/htdocs/test/src/controllers/HomeController.php",
-		"/C/Users/James/AppData/Local/Temp/_tc/tr/taskroom.ru/web/app.php",
-		"/C/Users/James/Desktop/WinApi Introduction.cpp",
-		"/C/Users/James/Desktop/MFC.cpp"
+		"/C/Users/James/AppData/Local/Temp/_tc/wf/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php"
 	],
 	"find":
 	{
@@ -932,39 +924,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/D/work/prog/projects/c++/jrush/src/controllers/bot.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 624,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								421,
-								421
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1025,6 +986,26 @@
 		"selected_items":
 		[
 			[
+				"form",
+				"src\\core\\model\\form\\Form.php"
+			],
+			[
+				"newco",
+				"src\\app\\controller\\NewsController.php"
+			],
+			[
+				"ru",
+				"resources\\translations\\ru.yml"
+			],
+			[
+				"er",
+				"src\\errors.log"
+			],
+			[
+				"home",
+				"resources\\views\\home.phtml"
+			],
+			[
 				"hom",
 				"src\\app\\controller\\HomeController.php"
 			],
@@ -1035,14 +1016,6 @@
 			[
 				"vi",
 				"src\\core\\model\\View.php"
-			],
-			[
-				"ru",
-				"resources\\translations\\ru.yml"
-			],
-			[
-				"form",
-				"src\\core\\model\\form\\Form.php"
 			],
 			[
 				"for",
@@ -1087,10 +1060,6 @@
 			[
 				"not",
 				"src\\core\\model\\exception\\NotFoundExceptino.php"
-			],
-			[
-				"newco",
-				"src\\app\\controller\\NewsController.php"
 			],
 			[
 				"err",
@@ -1187,10 +1156,6 @@
 			[
 				"ex",
 				"src\\core\\model\\exception\\Exception.php"
-			],
-			[
-				"home",
-				"resources\\views\\home.phtml"
 			],
 			[
 				"ga",
@@ -1531,10 +1496,6 @@
 			[
 				"coll",
 				"src\\core\\model\\Collection.php"
-			],
-			[
-				"artcle",
-				"src\\app\\model\\Article.php"
 			]
 		],
 		"width": 0.0

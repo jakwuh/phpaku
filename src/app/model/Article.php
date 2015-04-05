@@ -7,6 +7,7 @@ use Aku\Core\Model\Form\IntField;
 use Aku\Core\Model\Form\TextField;
 use Aku\Core\Model\Form\StrictTextField;
 use Aku\Core\Model\Form\DateField;
+use Aku\Core\Model\Form\Field;
 
 class Article extends Model
 {
@@ -16,24 +17,18 @@ class Article extends Model
 		parent::__construct($fields);
 	}
 
-	public function getWhereStatement()
+	public static function getWhereFields()
 	{
-		$id = $this->get("id");
-		return "id = {$id}";
-	}
-
-	public static function getFieldsNames()
-	{
-		return array_keys(self::build());
+		return array("id");
 	}
 
 	public static function build()
 	{
+		$fields = array();
 		$fields["id"] = new IntField("id");
 		$fields["title"] = new TextField("title");
 		$fields["promo_text"] = new TextField("promo_text");
 		$fields["text"] = new TextField("text");
-		$fields["author"] = new StrictTextField("author");
 		$fields["date"] = new DateField("date");
 		return $fields;
 	}

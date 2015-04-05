@@ -4,6 +4,7 @@ output.txt
 resources/
 .exe
 
+*.log
 *.bmp
 *.jpg
 *.jpeg

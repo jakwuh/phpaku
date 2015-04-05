@@ -69,6 +69,7 @@ news:
 article:
     edit: Редактирование
     post: Создание
+    remove: Удалить
     form:
         edit: Редактировать
         title: Название
@@ -81,6 +82,7 @@ gallery:
 
 article_form:
     add: Добавить новость
+    csrf_not_valid: Ваш сеанс закончен. Пожалуйста, обновите страницу и заполните форму снова
     title:
         empty: Заполните название
     promo_text:

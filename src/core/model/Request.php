@@ -23,6 +23,7 @@ class Request extends ContainerAware
 			$path = substr($path, 1);
 			$base = substr($base, 1);
 		}
+		$path = str_replace("?", "", $path);
 		$request->set("path", $path);
 		return $request;
 	}

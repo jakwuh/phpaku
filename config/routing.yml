@@ -23,16 +23,23 @@ article_update:
     action: update
     method: [post]
 
-article_add:
-    path: /news/add
+article_remove:
+    path: /news/(?'id'\d+)/delete
+    generator: /news/{id}/delete
     controller: News
-    action: add
+    action: remove
+    method: [post]
 
 article_edit:
     path: /news/(?'id'\d+)/edit
     generator: /news/{id}/edit
     controller: News
     action: edit
+
+article_add:
+    path: /news/add
+    controller: News
+    action: add
 
 article_post:
     path: /news

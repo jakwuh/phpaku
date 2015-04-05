@@ -5,6 +5,7 @@ namespace App\Controller;
 use Aku\Core\Model\View;
 use Aku\Core\Model\Exception\ApplicationException;
 use Aku\Core\Model\Exception\NotFoundException;
+use Aku\Core\Model\Exception\DatabaseException;
 use Aku\Core\Controller\Controller;
 use App\Model\ArticleCollection;
 use App\Model\Article;
@@ -17,7 +18,7 @@ class NewsController extends Controller
 	{
 		$articles = new ArticleCollection();
 		$loaded = $articles->load($this->get("connection"));
-		if (!$loaded) throw new ApplicationException();
+		if (!$loaded) throw new DatabaseException("cannot load articles");
 		$view = new View($this->container, "news");
 		$view->set("articles", $articles);
 		return $view;
@@ -45,14 +46,20 @@ class NewsController extends Controller
 	{
 		$form = new ArticleForm();
 		$form->bindRequest($this->get("request"));
-		if (count($form->errors) != 0)
+		
+		$csrf_guard = $this->get("csrf_guard");
+		$token = $this->get("request")->get("post")["csrf_" . ArticleForm::getName()];
+		if (!$csrf_guard->validateCSRFToken(ArticleForm::getName(), $token))
+			$form->addError("csrf_not_valid");
+
+		if ($form->errors_count != 0)
 			return $this->renderForm(null, $form);
 		
 		$article = new Article();
 		$form->bindToModel($article);
 		$saved = $article->save($this->get("connection"));
 		if (!$saved) throw new ApplicationException("cannot save article");
-		return $this->allAction();
+		$this->redirect($this->link("news"));
 	}
 
 	public function updateAction()
@@ -61,14 +68,28 @@ class NewsController extends Controller
 		$form = new ArticleForm();
 		$form->bindRequest($this->get("request"));
 		$form->bind("id", $article->get("id"));
-		if (count($form->errors) != 0)
+		
+		$csrf_guard = $this->get("csrf_guard");
+		$token = $this->get("request")->get("post")["csrf_" . ArticleForm::getName()];
+		if (!$csrf_guard->validateCSRFToken(ArticleForm::getName(), $token))
+			$form->addError("csrf_not_valid");
+
+		if ($form->errors_count != 0)
 			return $this->renderForm(null, $form);
 
 		$form->bindToModel($article);
 		$updated = $article->update($this->get("connection"));
-		if (!$updated) throw new ApplicationException("cannot update article");
+		if (!$updated) throw new DatabaseException("cannot update article");
 
-		return $this->showAction($this->loadArticle());
+		$this->redirect($this->link("article_show", array("id" => $article->get("id"))));
+	}
+
+	public function removeAction()
+	{
+		$article = $this->loadArticle();
+		$removed = $article->remove($this->get("connection"));
+		if (!$removed) throw new DatabaseException("cannot remove article", 1);
+		$this->redirect($this->link("news"));
 	}
 
 	public function loadArticle($id = null)
@@ -78,8 +99,7 @@ class NewsController extends Controller
 		$article = new Article(array("id" => $id));
 		$connection = $this->get("connection");
 		$loaded = $article->load($connection);
-		if (!$loaded)
-			throw new NotFoundException();
+		if (!$loaded) throw new NotFoundException();
 		return $article;
 	}
 
@@ -90,6 +110,7 @@ class NewsController extends Controller
 			$form->bindFromModel($article);
 			$form->bind("id", $article->get("id"));
 		}
+		$form->setCSRF($this->get("csrf_guard"));
 		$view = new View($this->container, "article_edit");
 		$view->set("form", $form);
 		return $view;

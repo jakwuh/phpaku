@@ -14,7 +14,12 @@ class StrictTextField extends Field
 	
 	public function set($value)
 	{
-		$this->value = $value;
+		preg_match("/[a-z0-9]+/i", $value, $matches);
+		if (empty($matches)) {
+			$this->error = "wrong_value";
+		} else {
+			$this->value = $value;
+		}
 		return $this->error;
 	}
 

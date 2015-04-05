@@ -14,6 +14,20 @@ class Router extends ContainerAware
 
 	public $routes;
 
+	public function link($route_name, array $args = array())
+	{
+		$get = function(&$var){ return $var; };
+		$routes = $this->routes;
+		if (!array_key_exists($route_name, $routes))
+			throw new ApplicationException("try to use unexisting route: " . $route_name);
+		$route = $routes[$route_name];
+		$subject = array_key_exists("generator", $route) ? $route["generator"] : $route["path"];
+		$callback = function($matches) use ($args, $get) { return $get($args[$matches[1]]); };
+		$output = preg_replace_callback("/{(.+)}/", $callback, $subject);
+		$output = PATH_BASE . $output;
+		return $output;
+	}
+
 	public static function test($pattern, $path)
 	{
 		$pattern = addcslashes($pattern, "/");
@@ -47,6 +61,7 @@ class Router extends ContainerAware
 				if (!array_key_exists("method", $args) || in_array($request->get("method"), $args["method"])) {
 					$response->setCallback($args["controller"], $args["action"]);
 					$request->set("parameters", $parameters);
+					$this->get("logger")->info($this, "route matched: " . $name);
 					return $response;
 				}
 			}

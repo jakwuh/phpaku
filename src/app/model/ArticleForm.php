@@ -6,6 +6,7 @@ use Aku\Core\Model\Form\Form;
 use Aku\Core\Model\Form\TextField;
 use Aku\Core\Model\Form\IntField;
 use Aku\Core\Model\Form\StrictTextField;
+use Aku\Core\Controller\CSRFGuard;
 
 class ArticleForm extends Form
 {
@@ -15,7 +16,6 @@ class ArticleForm extends Form
 		$this->fields["title"] = new TextField("title");
 		$this->fields["promo_text"] = new TextField("promo_text");
 		$this->fields["text"] = new TextField("text");
-		$this->fields["author"] = new StrictTextField("author");
 	}
 
 	public static function getName()

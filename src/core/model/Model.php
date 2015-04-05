@@ -14,7 +14,7 @@ abstract class Model
 	function __construct(array $fields)
 	{
 		foreach ($fields as $key => $value) {
-			$this->fields[$key]->set($value);
+			$this->set($key, $value);
 		}
 		$this->extra_statement = "";
 	}
@@ -24,7 +24,7 @@ abstract class Model
 		if ($this->has($key))
 			$this->fields[$key]->set($value);
 		else
-			throw new ApplicatinoException("try to set unexisting property: \$this->" . $key);
+			throw new ApplicationException("try to set unexisting property: \$this->" . $key);
 		return $this;
 	}
 
@@ -33,7 +33,7 @@ abstract class Model
 		if ($this->has($key))
 			return $this->fields[$key]->get();
 		else 
-			throw new ApplicatinoException("try to get unexisting property: \$this->" . $key);
+			throw new ApplicationException("try to get unexisting property: \$this->" . $key);
 	}
 
 	public function raw($key)
@@ -41,7 +41,7 @@ abstract class Model
 		if ($this->has($key))
 			return $this->fields[$key]->raw();
 		else
-			throw new ApplicatinoException("try to get unexisting property: \$this->" . $key);
+			throw new ApplicationException("try to get unexisting property: \$this->" . $key);
 	}
 
 	public function has($key)
@@ -54,7 +54,7 @@ abstract class Model
 		if ($this->has($key))
 			return $this->fields[$key]->getType();
 		else
-			throw new ApplicatinoException("try to get unexisting property: \$this->" . $key);
+			throw new ApplicationException("try to get unexisting property: \$this->" . $key);
 	}
 
 	public function update(Connection $connection)
@@ -65,12 +65,16 @@ abstract class Model
 	public function load(Connection $connection)
 	{
 		return $connection->selectModel($this);
-
 	}
 
 	public function save(Connection $connection)
 	{
 		return $connection->saveModel($this);
+	}
+
+	public function remove(Connection $connection)
+	{
+		return $connection->removeModel($this);
 	}
 
 	public function getFields()
@@ -83,9 +87,16 @@ abstract class Model
 		return $this->extra_statement;
 	}
 
-	abstract public function getWhereStatement();
+	public static function getFieldsNames()
+	{
+		return array_keys(static::build());
+	}
 
-	abstract public static function getFieldsNames();
+	abstract public static function build();
+
+	// abstract public function getWhereStatement();
+
+	abstract public static function getWhereFields();
 
 	abstract public static function getTableName();
 }

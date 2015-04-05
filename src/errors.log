@@ -1,26 +1,38 @@
-[04-04-15 22:37:46] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff2
-[04-04-15 22:37:46] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff
-[04-04-15 22:37:46] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.ttf
-[04-04-15 23:01:03] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff2
-[04-04-15 23:01:04] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff
-[04-04-15 23:01:04] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.ttf
-[05-04-15 00:21:15] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /localhost/test/web/
-[05-04-15 00:21:15] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff2
-[05-04-15 00:21:15] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff
-[05-04-15 00:21:15] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.ttf
-[05-04-15 00:21:36] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /localhost/test/web/
-[05-04-15 00:21:37] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /localhost/favicon.ico
-[05-04-15 00:21:45] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff2
-[05-04-15 00:21:45] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff
-[05-04-15 00:21:45] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.ttf
-[05-04-15 00:21:55] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff2
-[05-04-15 00:21:55] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff
-[05-04-15 00:21:55] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.ttf
-[05-04-15 00:21:59] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff2
-[05-04-15 00:21:59] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff
-[05-04-15 00:22:00] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.ttf
-[05-04-15 00:22:12] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff2
-[05-04-15 00:22:13] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.woff
-[05-04-15 00:22:13] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/fonts/glyphicons-halflings-regular.ttf
-[05-04-15 00:31:16] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/img/play-pause.svg
-[05-04-15 00:31:16] C:\xampp\htdocs\test\src\core\controller\Router.php : 55: route not found: /includes/img/loading.gif
+[05-04-15 03:20:05] C:\xampp\htdocs\test\src\core\controller\Connection.php : 43: cannot prepare statement
+[05-04-15 03:20:24] C:\xampp\htdocs\test\src\core\controller\Connection.php : 43: cannot prepare statement
+[05-04-15 03:20:54] C:\xampp\htdocs\test\src\core\controller\Connection.php : 44: cannot prepare statement
+[05-04-15 03:21:35] C:\xampp\htdocs\test\src\core\model\Model.php : 27: try to set unexisting property: $this->action
+[05-04-15 03:36:48] C:\xampp\htdocs\test\src\core\controller\Connection.php : 57: cannot prepare statement
+[05-04-15 03:37:25] C:\xampp\htdocs\test\src\core\controller\Connection.php : 57: cannot prepare statement
+[05-04-15 03:37:49] C:\xampp\htdocs\test\src\core\controller\Connection.php : 57: cannot prepare statement
+[05-04-15 03:39:10] C:\xampp\htdocs\test\src\core\controller\Connection.php : 57: cannot prepare statement
+[05-04-15 03:40:30] C:\xampp\htdocs\test\src\core\controller\Connection.php : 57: cannot prepare statement
+[05-04-15 03:40:39] C:\xampp\htdocs\test\src\core\controller\Connection.php : 57: cannot prepare statement
+[05-04-15 03:41:34] C:\xampp\htdocs\test\src\core\controller\Connection.php : 58: cannot prepare statement
+[05-04-15 03:54:31] C:\xampp\htdocs\test\src\core\controller\Connection.php : 57: cannot prepare statement
+[05-04-15 03:54:51] C:\xampp\htdocs\test\src\core\controller\Connection.php : 57: cannot prepare statement
+[05-04-15 04:12:27] C:\xampp\htdocs\test\src\core\controller\Router.php : 70: route not found: /includes/img/play-pause.svg
+[05-04-15 04:12:27] C:\xampp\htdocs\test\src\core\controller\Router.php : 70: route not found: /includes/img/loading.gif
+[05-04-15 10:16:19] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 96: 
+[05-04-15 10:26:54] C:\xampp\htdocs\test\src\core\model\Model.php : 44: try to get unexisting property: $this->
+[05-04-15 10:27:33] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 96: 
+[05-04-15 10:27:49] C:\xampp\htdocs\test\src\core\model\Model.php : 57: try to get unexisting property: $this->
+[05-04-15 10:28:12] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 96: 
+[05-04-15 10:28:34] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 96: 
+[05-04-15 10:28:58] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 96: 
+[05-04-15 10:36:22] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:36:29] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:36:42] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:36:50] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:37:16] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:37:55] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:39:49] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:40:31] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:40:47] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:41:32] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:41:43] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:42:02] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:42:29] C:\xampp\htdocs\test\src\app\controller\NewsController.php : 76: cannot update article
+[05-04-15 10:48:18] C:\xampp\htdocs\test\src\core\controller\Connection.php : 41: cannot prepare statement
+[05-04-15 11:08:47] C:\xampp\htdocs\test\src\core\controller\Router.php : 70: route not found: /includes/img/play-pause.svg
+[05-04-15 11:08:47] C:\xampp\htdocs\test\src\core\controller\Router.php : 70: route not found: /includes/img/loading.gif

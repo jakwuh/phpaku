@@ -4,12 +4,19 @@
       <div class="jumbotron" style="margin-top: 80px;">
         <h1><?php echo $this->article->get("title"); ?></h1>
         <p><?php echo $this->article->get("text"); ?></p>
-         <a href="<?php $this->echoLink("article_edit", array("id" => $this->article->get("id"))) ?>">
-        	<button type="button" class="btn btn-primary"><?php echo $this->translate("article.form.edit") ?></button>
-        </a>
-        <a href="<?php $this->echoLink("news"); ?>">
-        	<button type="button" class="btn btn-default">&laquo <?php echo $this->translate("news.goto") ?></button>
-        </a>
+        
+        <form class="form-inline" action="<?php $this->echoLink("article_remove", array("id" => $this->article->get("id"))); ?>" method="POST">
+          <a href="<?php $this->echoLink("news"); ?>">
+            <button type="button" class="btn btn-default">&laquo <?php echo $this->translate("news.goto") ?></button>
+          </a>
+
+          <a href="<?php $this->echoLink("article_edit", array("id" => $this->article->get("id"))) ?>">
+            <button type="button" class="btn btn-primary"><?php echo $this->translate("article.form.edit") ?></button>
+          </a>
+          
+          <button type="submit" class="btn btn-danger"><?php echo $this->translate("article.remove") ?></button>
+        </form>
+        
       </div>
     </div>
 

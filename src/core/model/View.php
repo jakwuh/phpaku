@@ -51,16 +51,7 @@ class View extends ContainerAware
 
 	public function link($route_name, array $args = array())
 	{
-		$get = function(&$var){ return $var; };
-		$routes = $this->container->get("router")->routes;
-		if (!array_key_exists($route_name, $routes))
-			throw new ApplicationException("try to use unexisting route: " . $route_name);
-		$route = $routes[$route_name];
-		$subject = array_key_exists("generator", $route) ? $route["generator"] : $route["path"];
-		$callback = function($matches) use ($args, $get) { return $get($args[$matches[1]]); };
-		$output = preg_replace_callback("/{(.+)}/", $callback, $subject);
-		$output = PATH_BASE . $output;
-		return $output;
+		return $this->container->get("router")->link($route_name, $args);
 	}
 
 	public function echoLink($route_name, array $args = array())
