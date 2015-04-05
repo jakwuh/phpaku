@@ -51,11 +51,11 @@ class Connection extends ContainerAware
 	{
 		$fields = self::glueArray($model::getFieldsNames());
 		$table = $model::getTableName();
-		$condition = self::generateOmits($model->getWhereFields(), " AND ");
+		$condition = self::generateOmits($model->getSearchFields(), " AND ");
 		$extra = $model->getExtraStatement();               
 		$values = array();                                                                   
-		$references = self::generateReferences($model, $model::getWhereFields(), $values);
-		$types = self::generateTypes($model, $model::getWhereFields());
+		$references = self::generateReferences($model, $model::getSearchFields(), $values);
+		$types = self::generateTypes($model, $model::getSearchFields());
 
 		$stmt = $this->mysqli->prepare("SELECT {$fields} FROM `{$table}` WHERE {$condition} {$extra}");
 		if (!$stmt) throw new ApplicationException("cannot prepare statement");
@@ -80,10 +80,10 @@ class Connection extends ContainerAware
 		$fields = $model::getFieldsNames();
 		$table = $model::getTableName();
 		$omits = self::generateOmits($fields);
-		$condition = self::generateOmits($model::getWhereFields(), " AND ");
+		$condition = self::generateOmits($model::getSearchFields(), " AND ");
 		$values = array();
-		$references = self::generateReferences($model, array_merge($fields, $model::getWhereFields()), $values);
-		$types = self::generateTypes($model, array_merge($fields, $model::getWhereFields()));
+		$references = self::generateReferences($model, array_merge($fields, $model::getSearchFields()), $values);
+		$types = self::generateTypes($model, array_merge($fields, $model::getSearchFields()));
 		
 		$stmt = $this->mysqli->prepare("UPDATE `{$table}` SET {$omits} WHERE {$condition}");
 		if (!$stmt) throw new ApplicationException("cannot prepare statement");
@@ -96,10 +96,10 @@ class Connection extends ContainerAware
 	public function removeModel(Model $model)
 	{
 		$table = $model::getTableName();
-		$condition = self::generateOmits($model::getWhereFields(), " AND ");
+		$condition = self::generateOmits($model::getSearchFields(), " AND ");
 		$values = array();                                                                   
-		$references = self::generateReferences($model, $model::getWhereFields(), $values);
-		$types = self::generateTypes($model, $model::getWhereFields());
+		$references = self::generateReferences($model, $model::getSearchFields(), $values);
+		$types = self::generateTypes($model, $model::getSearchFields());
 
 		$stmt = $this->mysqli->prepare("DELETE FROM {$table} WHERE {$condition}");
 		if (!$stmt) throw new ApplicationException("cannot prepare statement");

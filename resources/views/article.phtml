@@ -15,6 +15,10 @@
           </a>
           
           <button type="submit" class="btn btn-danger"><?php echo $this->translate("article.remove") ?></button>
+
+          <?php if ($this->form->csrf) { ?>
+            <input type="hidden" name="form[<?php echo $this->form->getCSRFName(); ?>]" value="<?php echo $this->form->csrf ?>">
+          <?php } ?>
         </form>
         
       </div>

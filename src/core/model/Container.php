@@ -2,6 +2,8 @@
 
 namespace Aku\Core\Model;
 
+use Symfony\Component\Yaml\Yaml;
+
 class Container
 {
 
@@ -10,6 +12,13 @@ class Container
 	function __construct(array $attributes = array())
 	{
 		$this->attributes = $attributes;
+		$this->loadSettings();
+	}
+
+	private function loadSettings()
+	{
+		$settings = Yaml::parse(file_get_contents(PATH_CONFIG . "/config.yml"));
+		$this->set("settings", $settings);
 	}
 
 	public function get($key)

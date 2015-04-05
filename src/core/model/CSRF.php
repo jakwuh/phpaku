@@ -26,7 +26,7 @@ class CSRF extends Model
 		return $fields;
 	}
 
-	public static function getWhereFields()
+	public static function getSearchFields()
 	{
 		return array("sid", "action", "token");
 	}

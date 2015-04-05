@@ -4,6 +4,8 @@ namespace Aku\Core\Model;
 
 use Aku\Core\Model\Container;
 use Aku\Core\Model\Exception\ApplicationException;
+use Aku\Core\Model\Response;
+use Aku\Core\Controller\Logger;
 
 class Response
 {
@@ -41,7 +43,7 @@ class Response
 		$this->response_code = $code;
 	}
 
-	public static function sendError($message, $http_response_code, $container = null)
+	public static function sendError($message, $http_response_code, Container $container = null)
 	{
 		if (!$container) $container = new Container();
 		$response = new Response();
@@ -53,7 +55,15 @@ class Response
 
 	public function send()
 	{
-		http_response_code($this->response_code);
-		$this->view->render();
+		try {
+			http_response_code($this->response_code);
+			$this->view->render();
+			return;
+		} catch (\Exception $e) {
+			Logger::log($e);
+			Response::sendError("default", 500);
+		}
+		die();
+		
 	}
 }

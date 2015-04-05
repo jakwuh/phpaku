@@ -9,6 +9,7 @@ resources/
 *.jpg
 *.jpeg
 *.png
+*.sublime*
 
 # Unnecessary VS files and folders
 Debug

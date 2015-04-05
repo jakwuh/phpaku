@@ -88,6 +88,11 @@ abstract class Form
 		$this->errors_count++;
 	}
 
+	public static function getCSRFName()
+	{
+		return "csrf_" . static::getName();
+	}
+
 	abstract public static function getName();
 
 }

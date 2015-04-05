@@ -11,6 +11,14 @@ class Request extends ContainerAware
 		$this->container = new Container();
 	}
 
+	public function getFromPost($key)
+	{
+		$post = $this->get("post");
+		if (!is_array($post)) return null;
+		if (!array_key_exists($key, $post)) return null;
+		return $post[$key];
+	}
+
 	public static function createFromGlobals()
 	{
 		$request = new Request();

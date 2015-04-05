@@ -6,6 +6,7 @@ use Aku\Core\Model\View;
 use Aku\Core\Model\Exception\ApplicationException;
 use Aku\Core\Model\Exception\NotFoundException;
 use Aku\Core\Model\Exception\DatabaseException;
+use Aku\Core\Model\Exception\CSRFNotValidException;
 use Aku\Core\Controller\Controller;
 use App\Model\ArticleCollection;
 use App\Model\Article;
@@ -28,6 +29,9 @@ class NewsController extends Controller
 	{
 		if (!$article) $article = $this->loadArticle();
 		$view = new View($this->container, "article");
+		$form = new ArticleForm();
+		$form->setCSRF($this->get("csrf_guard"));
+		$view->set("form", $form);
 		$view->set("article", $article);
 		return $view;
 	}
@@ -48,7 +52,7 @@ class NewsController extends Controller
 		$form->bindRequest($this->get("request"));
 		
 		$csrf_guard = $this->get("csrf_guard");
-		$token = $this->get("request")->get("post")["csrf_" . ArticleForm::getName()];
+		$token = $this->get("request")->getFromPost(ArticleForm::getCSRFName());
 		if (!$csrf_guard->validateCSRFToken(ArticleForm::getName(), $token))
 			$form->addError("csrf_not_valid");
 
@@ -70,7 +74,7 @@ class NewsController extends Controller
 		$form->bind("id", $article->get("id"));
 		
 		$csrf_guard = $this->get("csrf_guard");
-		$token = $this->get("request")->get("post")["csrf_" . ArticleForm::getName()];
+		$token = $this->get("request")->getFromPost(ArticleForm::getCSRFName());
 		if (!$csrf_guard->validateCSRFToken(ArticleForm::getName(), $token))
 			$form->addError("csrf_not_valid");
 
@@ -87,6 +91,12 @@ class NewsController extends Controller
 	public function removeAction()
 	{
 		$article = $this->loadArticle();
+
+		$csrf_guard = $this->get("csrf_guard");
+		$token = $this->get("request")->getFromPost(ArticleForm::getCSRFName());
+		if (!$csrf_guard->validateCSRFToken(ArticleForm::getName(), $token))
+			throw new CSRFNotValidException("csrf not valid");
+
 		$removed = $article->remove($this->get("connection"));
 		if (!$removed) throw new DatabaseException("cannot remove article", 1);
 		$this->redirect($this->link("news"));

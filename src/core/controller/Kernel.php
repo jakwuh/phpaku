@@ -16,7 +16,7 @@ use Aku\Core\Model\Exception\Exception;
 use Aku\Core\Model\Exception\NotFoundException;
 use Aku\Core\Model\Exception\WrongRouteException;
 use Aku\Core\Model\Exception\ApplicationException;
-use Symfony\Component\Yaml\Yaml;
+use Aku\Core\Model\Exception\CSRFNotValidException;
 
 class Kernel extends ContainerAware
 {
@@ -24,7 +24,6 @@ class Kernel extends ContainerAware
 	{
 		try {
 			$this->container = new Container();
-			$this->loadSettings();
 			$this->logger = new Logger($this->container);
 			$this->router = new Router($this->container);
 			$this->guard = new Guard($this->container);
@@ -36,12 +35,6 @@ class Kernel extends ContainerAware
 			Response::sendError("default", 500, $this->container);
 		}
 		die();
-	}
-
-	private function loadSettings()
-	{
-		$settings = Yaml::parse(file_get_contents(PATH_CONFIG . "/config.yml"));
-		$this->set("settings", $settings);
 	}
 
 	public function handle(Request $request)
@@ -57,6 +50,9 @@ class Kernel extends ContainerAware
 		} catch (WrongRouteException $e) {
 			Logger::log($e);
 			Response::sendError("wrong_route", 404, $this->container);
+		} catch (CSRFNotValidException $e) {
+			Logger::log($e);
+			Response::sendError("csrf_not_valid", 403, $this->container);
 		} catch (\Exception $e) {
 			Logger::log($e);
 			Response::sendError("default", 500, $this->container);

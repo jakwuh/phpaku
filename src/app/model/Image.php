@@ -16,7 +16,7 @@ class Image extends Model
 		parent::__construct($fields);
 	}
 
-	public static function getWhereFields()
+	public static function getSearchFields()
 	{
 		return array("id");
 	}

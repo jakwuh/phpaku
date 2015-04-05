@@ -96,7 +96,7 @@ abstract class Model
 
 	// abstract public function getWhereStatement();
 
-	abstract public static function getWhereFields();
+	abstract public static function getSearchFields();
 
 	abstract public static function getTableName();
 }
