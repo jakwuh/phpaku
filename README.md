@@ -1,12 +1,13 @@
-Всего 3 простых шага для того, чтобы запустить сайт на локальном сервере:
+PHP custom framework with an application example.
+3 simple steps to run the application:
 <br>
-- Скопировать проект в любую папку на локальном сервере
+- Clone the repo
 ```
-    git clone https://github.com/akwuh/test.git
+    git clone https://github.com/akwuh/phpaku.git
 ```
-- Импортировать БД `test.sql` из папки `sql\`
+- Import Database dump `test.sql` from the folder `sql\`
 <br>
-- При необходимости изменить следующие настройки в файле конфигураций `config\config.yml`:
+- Change settings in `config\config.yml` (based on your mysql connection credentials):
 ```
 db_host: localhost
 db_name: test
@@ -14,4 +15,4 @@ db_user: root
 db_password: 
 ```
 <hr>
-Готово!
+That's it!
